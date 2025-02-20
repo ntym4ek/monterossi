@@ -2,3 +2,174 @@
 
 // секция для размещения общих для сайта стилей
 
+.btn { font-weight: 700; }
+
+.page-header {
+  display: block;
+  font-size: 14px; font-weight: 700; text-transform: uppercase;
+  height: initial;
+  .r1 {
+    display: flex; align-items: center;
+    height: 100px;
+    .r1-inner {
+      border-bottom: 1px solid $gray-dark;
+      width: 100%;
+    }
+  }
+  .r2 {
+    display: flex; align-items: center;
+    height: 68px;
+  }
+  .branding {
+    justify-content: flex-start; align-items: center;
+    height: 100px;
+    img { height: 66px; }
+  }
+  .global {
+    display: none;
+    opacity: .2;
+    transition: opacity 150ms;
+    margin-left: 1rem;
+    &:hover { opacity: .5; }
+    img { max-height: 40px; }
+  }
+  .search {
+    .form-item {
+      margin-bottom: 0;
+      input { width: 100%; }
+    }
+    .btn { margin: 0; }
+  }
+  .language-switch, .cart-link {
+    font-size: 1.5rem;
+    position: relative;
+    a { color: inherit; }
+    .badge { font-size: 10px; }
+
+    @media #{$pad} {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media #{$pad} {
+    .branding img { height: 76px; }
+    .global { display: block; }
+  }
+}
+
+.page-footer {
+  .branding {
+    margin-bottom: 1.5rem;
+    .image { width: 55px; }
+  }
+  .menu {
+    font-size: $font-size-small; font-weight: 700; text-transform: uppercase;
+    a {
+      color: inherit;
+      display: inline-block;
+      padding: .5rem 0;
+      transition: color 150ms;
+      &:hover, &:focus {
+        color: $text-light;
+      }
+    }
+    .ctooltip { margin-top: .1rem; }
+    .contacts { text-transform: lowercase; }
+  }
+
+  @media #{$pad} {
+    .menu { max-width: 225px; }
+  }
+  @media #{$tablet} {
+    .menu { max-width: 260px; }
+  }
+}
+
+.product-teaser {
+  padding: 0 2rem;
+  .p-label {
+    color: $text-color; font-size: $font-size-h3; font-weight: 800; text-align: center;
+    margin: 1rem 0;
+  }
+  .p-image {
+    position: relative;
+    .image { width: 55%; } // край предмета по середине с учётом правой отбивки
+  }
+  .p-stickers {
+    position: absolute; right: 0; top: 0; z-index: 1;
+  }
+  .p-sticker { margin-top: 1rem; }
+  .p-description {
+    color: $text-muted; font-size: $font-size-small; text-align: center;
+    margin-bottom: 1rem;
+  }
+  .p-tares {
+    color: $text-color; font-size: $font-size-small; text-align: center;
+    display: flex; justify-content: center;
+  }
+  .p-tare {
+    margin: 0 3px; padding: .3rem .5rem;
+    &.selected {
+      background-color: $gray-lightest;
+      border-radius: 5px;
+    }
+  }
+}
+
+// - Forms -------------------------------------------------------------------------------------------------------------
+.form-item {
+  .form-text,
+  .form-textarea,
+  .form-select {
+    &:focus { border-bottom-color: $brand-blue; }
+  }
+  .form-textarea:focus { border-color: $brand-blue; }
+  .form-text,
+  .form-select {
+    border-top-color: transparent; border-left-color: transparent; border-right-color: transparent;
+    &:focus { border-bottom-color: $brand-blue; }
+  }
+}
+
+// - Views -------------------------------------------------------------------------------------------------------------
+.view {
+  &.view-catalog {
+    .view-content { @include row(); }
+    .views-row { @include col('xs', 12); @include col('md', 4); }
+  }
+}
+
+
+#back-to-top {
+  background: #fff;
+  border-radius: 50px;
+  border: .5rem solid #DB08128A;
+  .icon {
+    color: $brand-red; font-size: 3rem;
+  }
+
+  @media #{$pad} {
+    .icon { font-size: 2rem; }
+  }
+}
+
+.hover-zoom {
+  transition: all 200ms;
+  &:hover { transform: scale(1.02);  }
+}
+.hover-raise {
+  transition: all 200ms;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.form-item-fz152-agreement {
+  color: $gray-light; font-size: $font-size-small;
+  margin-top: 2rem;
+  a {
+    color: inherit; text-decoration: underline;
+    transition: color 200ms;
+    &:hover { color: $gray-lightest; }
+  }
+}

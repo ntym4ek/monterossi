@@ -1,0 +1,166 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function ext_block_block_info()
+{
+  return [
+    'custom-block-front-banner'  => [                     // по какой-то причине, если индекс содержит _ вместо - блок виден в базовой теме, но НЕ виден в подтеме.
+      'info' => t('CB | Front Banner'),
+    ],
+    'custom-block-front-counters' => [
+      'info' => t('CB | Счётчики на главной'),
+    ],
+    'custom-block-kccc' => [
+      'info' => t('CB | О компании'),
+    ],
+    'custom-block-consulting' => [
+      'info' => t('CB | Консультация'),
+    ],
+    'custom-block-quality' => [
+      'info' => t('CB | Качество'),
+    ],
+    'custom-block-categories' => [
+      'info' => t('CB | Категории'),
+    ],
+    'custom-block-popular' => [
+      'info' => t('CB | Популярное'),
+    ],
+    'custom-block-video' => [
+      'info' => t('CB | Видео'),
+    ],
+  ];
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ext_block_block_view($delta = '')
+{
+  $block = [];
+
+  // блоки с динамически формируемым содержимым
+  if ($delta == 'custom-block-front-banner') {
+    $block['content'] = theme($delta, ['slides' => ext_block_get_front_banner_slides()]);
+  }
+
+  elseif ($delta == 'custom-block-popular') {
+    if ($cards = ext_block_products_get_popular()) {
+      $block['content'] = theme($delta, ['cards' => $cards]);
+    } else $block['content'] = null;
+  }
+
+  // блоки со статичной разметкой
+  elseif (strpos($delta, 'custom-block-') === 0) {
+    $block['content'] = theme($delta);
+  }
+
+  // общее для программных блоков
+  if (strpos($delta, 'custom-block-') === 0) {
+    $block['subject'] = null;
+    drupal_add_js(drupal_get_path('module', 'ext_block') . '/js/ext_block.js');
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ext_block_theme()
+{
+  return [
+    'custom-block-front-banner'    => [
+      'variables' => [],
+      'template' => 'templates/block-front-banner',
+    ],
+    'custom-block-front-counters'    => [
+      'variables' => [],
+      'template' => 'templates/block-front-counters',
+    ],
+    'custom-block-kccc'    => [
+      'variables' => [],
+      'template' => 'templates/block-kccc',
+    ],
+    'custom-block-consulting'    => [
+      'variables' => [],
+      'template' => 'templates/block-consulting',
+    ],
+    'custom-block-quality'    => [
+      'variables' => [],
+      'template' => 'templates/block-quality',
+    ],
+    'custom-block-categories'    => [
+      'variables' => [],
+      'template' => 'templates/block-categories',
+    ],
+    'custom-block-popular'    => [
+      'variables' => [],
+      'template' => 'templates/block-popular',
+    ],
+    'custom-block-video'    => [
+      'variables' => [],
+      'template' => 'templates/block-video',
+    ],
+  ];
+}
+
+function ext_block_get_front_banner_slides()
+{
+  $banners = [];
+  if ($terms = taxonomy_get_tree(taxonomy_vocabulary_machine_name_load('banners_front')->vid, 0, null, true)) {
+    foreach($terms as $term) {
+      $term_wr = entity_metadata_wrapper('taxonomy_term', $term);
+      $banners[] = [
+        'img' => $term_wr->field_image->file->url->value(),
+        'content' => $term_wr->description->value(),
+      ];
+    }
+  }
+
+  return $banners;
+}
+
+function ext_block_products_get_popular()
+{
+  $cards = [];
+
+  $products = [];
+  $products[] = [
+    'label' => 'Grande EX C3',
+    'image' => '/sites/default/files/images/blocks/test_product.png',
+    'description' => 'Синтетическое моторное масло для легковых автомобилей',
+    'tare' => [
+      ['label' => '1 л'],
+      ['label' => '4 л', 'selected' => true],
+      ['label' => '20 л'],
+      ['label' => '200 л'],
+    ],
+    'pao' => true,
+    'mid' => true,
+  ];
+  $products[] = [
+    'label' => 'Grande EX C3',
+    'image' => '/sites/default/files/images/blocks/test_product.png',
+    'description' => 'Синтетическое моторное масло для легковых автомобилей',
+    'tare' => [
+      ['label' => '1 л'],
+      ['label' => '4 л'],
+      ['label' => '20 л', 'selected' => true],
+      ['label' => '200 л'],
+    ],
+    'pao' => false,
+    'mid' => true,
+  ];
+  $products[] = $products[0];
+  $products[] = $products[1];
+  $products[] = $products[0];
+  $products[] = $products[1];
+
+  foreach ($products as $product_info) {
+    $cards[] = theme('product_teaser', ['product_info' => $product_info]);
+  }
+
+  return $cards;
+}

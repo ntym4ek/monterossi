@@ -1,0 +1,53 @@
+@import "variables"; // чтобы переменные не подсвечивались
+
+:root {
+  --swiper-theme-color: #DA0009;
+}
+
+.slider,
+.carousel {
+  position: relative;
+
+  &.top-pagination {
+    --swiper-pagination-top: 1rem;
+    --swiper-pagination-bottom: none;
+  }
+
+  &.outer-pagination {
+    margin-bottom: 3rem;
+    > .swiper-pagination { --swiper-pagination-bottom: -2rem; }
+
+    &.top-pagination {
+      margin-top: 4rem; margin-bottom: 0;
+      > .swiper-pagination {
+        --swiper-pagination-top: -2.5rem;
+        --swiper-pagination-bottom: auto;
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next { text-shadow: 1px 1px 8px #555; }
+  &.outer-navigation {
+    .swiper-button-prev,
+    .swiper-button-next { text-shadow: none; }
+  }
+
+  &.no-mobile-frame {
+    > .swiper { padding: 0 $page-gutter-xs; }
+
+    @media #{$pad}    { > .swiper { padding: 0 $page-gutter-md; }}
+    @media #{$tablet} { > .swiper { padding: 0 $page-gutter-lg; }}
+    @media #{$laptop} { > .swiper { padding: 0; }}
+    @media #{$phone-only}, #{$smart-only}, #{$pad-only}, #{$tablet-only} {
+      @include screen-width();
+    }
+  }
+
+  @media #{$laptop} {
+    &.outer-navigation > .swiper-button-prev,
+    &.outer-navigation > .swiper-button-next {
+      --swiper-navigation-sides-offset: -4rem;
+    }
+  }
+}

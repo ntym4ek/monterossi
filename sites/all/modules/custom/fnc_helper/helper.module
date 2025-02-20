@@ -1,0 +1,147 @@
+<?php
+
+/**
+ * Implements hook_menu_alter()
+ */
+function helper_menu_alter(&$items)
+{
+  // убрать материалы с Главной
+  $items['node']['page callback'] = 'helper_empty_front_page_callback';
+}
+
+function helper_empty_front_page_callback()
+{
+  drupal_set_title('');
+  return [];
+}
+
+function helper_product_get_info($nid)
+{
+  $product_wr = entity_metadata_wrapper('node', $nid);
+
+  $tare = [];
+  foreach($product_wr->field_p_tare->getIterator() as $tare_wr) {
+    $tare[$tare_wr->weight->value()] = helper_term_get_info($tare_wr->getIdentifier());
+  }
+  ksort($tare);
+
+  return [
+    'id' => $product_wr->getIdentifier(),
+    'title' => $product_wr->label(),
+    'label' => $product_wr->label(),
+    'image' => $product_wr->field_image->file->url->value(),
+    'description' => strip_tags($product_wr->body->summary->value()),
+    'tare' => $tare,
+    'pao' => false,
+    'mid' => true,
+  ];
+}
+
+/** -------------------------------- Дата на русском со склонением - */
+//Функция форматирования даты
+function helper_format_date($timestamp, $type = 'medium', $format = '', $timezone = NULL, $langcode = null)
+{
+  global $language;
+  $langcode = isset($langcode) ? $langcode : $language->language;
+
+  if (!isset($timezone)) {
+    global $user;
+    if (variable_get('configurable_timezones', 1) && $user->uid && strlen($user->timezone)) {
+      $timezone = $user->timezone;
+    }
+    else {
+      $timezone = variable_get('date_default_timezone', 0);
+    }
+  }
+
+  switch ($type) {
+    case 'small':
+      $format = variable_get('date_format_short', 'm/d/Y - H:i');
+      break;
+    case 'large':
+      $format = variable_get('date_format_long', 'l, F j, Y - H:i');
+      break;
+    case 'custom':
+      // No change to format.
+      break;
+    case 'medium':
+    default:
+      $format = variable_get('date_format_medium', 'D, m/d/Y - H:i');
+  }
+
+  $max = strlen($format);
+  $date = '';
+  for ($i = 0; $i < $max; $i++) {
+    $c = $format[$i];
+    if (strpos('AaDlM', $c) !== FALSE) {
+      $date .= t(date($c, $timestamp), array(), array('langcode' => $langcode));
+    }
+    else if ($c == 'F') {
+      // Special treatment for long month names: May is both an abbreviation
+      // and a full month name in English, but other languages have
+      // different abbreviations.
+
+      $long_month_name = t('!long-month-name ' . date($c, $timestamp), array('!long-month-name' => ''), array('langcode' => $langcode));
+
+      //month_declination
+      $month_declination_function = 'month_declination_' . $langcode;
+      if ( function_exists( $month_declination_function ) ) {
+        $long_month_name = $month_declination_function( $long_month_name, format_date( $timestamp, 'custom', 'n' ) );
+      }
+
+      $date .= trim($long_month_name);
+    }
+    else if (strpos('BdgGhHiIjLmnsStTUwWYyz', $c) !== FALSE) {
+      $date .= date($c, $timestamp);
+    }
+    else if ($c == 'r') {
+      $date .= format_date($timestamp - $timezone, 'custom', 'D, d M Y H:i:s O', $timezone, array('langcode' => $langcode));
+    }
+    else if ($c == 'O') {
+      $date .= sprintf('%s%02d%02d', ($timezone < 0 ? '-' : '+'), abs($timezone / 3600), abs($timezone % 3600) / 60);
+    }
+    else if ($c == 'Z') {
+      $date .= $timezone;
+    }
+    else if ($c == '\\') {
+      $date .= $format[++$i];
+    }
+    else {
+      $date .= $c;
+    }
+  }
+
+  return $date;
+}
+
+/**
+ * Вернуть массив информации о термине таксономии
+ */
+function helper_term_get_info($tid)
+{
+  $term = [];
+  $term_wr = entity_metadata_wrapper('taxonomy_term', $tid);
+  if ($term_wr->value()) {
+    $voc = taxonomy_vocabulary_load($term_wr->value()->vid);
+    $term = [
+      'id' => $term_wr->getIdentifier(),
+      'label' => $term_wr->label(),
+      'description' => $term_wr->description->value(),
+      'voc' => [
+        'id' => $voc->vid,
+        'name' => $voc->machine_name,
+      ],
+    ];
+
+    // todo по списку полей добавить значения в массив
+    if ($fields = field_info_instances('taxonomy_term', $voc->machine_name)) {
+      foreach ($fields as $name => $field) {
+        if (!in_array($name, ['name_field', 'description_field'])) {
+          $term[$name] = $term_wr->{$name}->value();
+        }
+      }
+    }
+  }
+
+  return $term;
+}
