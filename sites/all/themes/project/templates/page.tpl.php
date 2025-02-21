@@ -199,26 +199,26 @@
           </div>
           <div class="col-xs-6 col-md-4">
             <ul class="menu company">
-              <li><?php print l(t('About us'), 'node/11'); ?></li>
-              <li><?php print l(t('For distributors'), 'novosti'); ?></li>
-              <li><?php print l(t('Technical advice'), 'node/12'); ?></li>
+              <li><?php print l(t('About us'), ''); ?></li>
+              <li><?php print l(t('For distributors'), ''); ?></li>
+              <li><?php print l(t('Technical advice'), ''); ?></li>
               <li><a href="https://kccc.group" target="_blank">KCCC GROUP</a></li>
             </ul>
           </div>
 
           <div class="col-xs-12 col-md-4">
             <ul class="menu directions">
-              <li><?php print l(t('Motor oils for passenger cars'), 'taxonomy/term/8'); ?></li>
-              <li><?php print l(t('Motor oils for trucksy'), 'taxonomy/term/10'); ?></li>
-              <li><?php print l(t('Transmission oils'), 'taxonomy/term/9', ['html' => true]); ?></li>
-              <li><?php print l(t('Car cosmetics'), 'taxonomy/term/9', ['html' => true]); ?></li>
+              <li><?php print l(t('Motor oils for passenger cars'), '', ['html' => true]); ?></li>
+              <li><?php print l(t('Motor oils for trucks'), '', ['html' => true]); ?></li>
+              <li><?php print l(t('Transmission oils'), '', ['html' => true]); ?></li>
+              <li><?php print l(t('Car cosmetics'), '', ['html' => true]); ?></li>
             </ul>
           </div>
 
           <div class="col-xs-6 col-md-3">
             <ul class="menu actions">
-              <li><?php print l(t('Contacts'), 'node/12'); ?></li>
-              <li><?php print l(t('ООО «КССС лубрикантс»'), '<front>'); ?></li>
+              <li><?php print l(t('Contacts'), ''); ?></li>
+              <li><?php print l('ООО «КССС Лубрикантс»', '<front>'); ?></li>
               <li><a href="tel:88005502426" class="contacts c0py">8 (800) 550-24-26</a></li>
               <li><a href="mailto:info@monterossi.ru" class="contacts c0py">info@monterossi.ru</a></li>
             </ul>

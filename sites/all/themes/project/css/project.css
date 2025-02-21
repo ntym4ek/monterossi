@@ -1914,6 +1914,19 @@ label,
       background-color: #E9E9E9;
       cursor: not-allowed;
       pointer-events: none; }
+    .form-item .form-text:focus,
+    .form-item .form-textarea:focus,
+    .form-item .form-select:focus,
+    .field-type-text .form-text:focus,
+    .field-type-text .form-textarea:focus,
+    .field-type-text .form-select:focus,
+    .field-type-text-long .form-text:focus,
+    .field-type-text-long .form-textarea:focus,
+    .field-type-text-long .form-select:focus,
+    .field-type-text-with-summary .form-text:focus,
+    .field-type-text-with-summary .form-textarea:focus,
+    .field-type-text-with-summary .form-select:focus {
+      border-color: #213A6E; }
   .form-item.form-disabled .form-text,
   .form-item.form-disabled .form-textarea,
   .form-item.form-disabled .form-select,
@@ -2420,10 +2433,10 @@ ul.menu {
     text-transform: lowercase; }
 @media only screen and (min-width: 768px) {
   .page-footer .menu {
-    max-width: 225px; } }
+    max-width: 270px; } }
 @media only screen and (min-width: 1024px) {
   .page-footer .menu {
-    max-width: 260px; } }
+    max-width: 300px; } }
 
 .product-teaser {
   padding: 0 2rem; }
@@ -2462,20 +2475,11 @@ ul.menu {
       background-color: #E9E9E9;
       border-radius: 5px; }
 
-.form-item .form-text:focus,
-.form-item .form-textarea:focus,
-.form-item .form-select:focus {
-  border-bottom-color: #213A6E; }
-.form-item .form-textarea:focus {
-  border-color: #213A6E; }
 .form-item .form-text,
 .form-item .form-select {
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent; }
-  .form-item .form-text:focus,
-  .form-item .form-select:focus {
-    border-bottom-color: #213A6E; }
+  border-top-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important; }
 
 .view.view-catalog .view-content {
   margin: 0 -1rem;
@@ -2780,7 +2784,7 @@ ul.menu {
       transition: all 200ms; }
     .block-facetapi .block-title.active i {
       transform: rotate(270deg); }
-  .block-facetapi .dropdown {
+  .block-facetapi .content {
     padding: 0 1rem 1rem 1rem; }
   .block-facetapi .dropdown-filter {
     margin-bottom: 1rem; }

@@ -78,10 +78,10 @@
   }
 
   @media #{$pad} {
-    .menu { max-width: 225px; }
+    .menu { max-width: 270px; }
   }
   @media #{$tablet} {
-    .menu { max-width: 260px; }
+    .menu { max-width: 300px; }
   }
 }
 
@@ -119,15 +119,8 @@
 // - Forms -------------------------------------------------------------------------------------------------------------
 .form-item {
   .form-text,
-  .form-textarea,
   .form-select {
-    &:focus { border-bottom-color: $brand-blue; }
-  }
-  .form-textarea:focus { border-color: $brand-blue; }
-  .form-text,
-  .form-select {
-    border-top-color: transparent; border-left-color: transparent; border-right-color: transparent;
-    &:focus { border-bottom-color: $brand-blue; }
+    border-top-color: transparent!important; border-left-color: transparent!important; border-right-color: transparent!important;
   }
 }
 
