@@ -70,13 +70,10 @@ function ext_node_preprocess_node(&$vars)
   // -- Полный вид просмотра ---------------------------------------------------
   if ($vars['view_mode'] == 'full') {
     if ($node->type == 'product') {
-      // кнопка Поделиться
-      // -- Полная ссылка для социальных шар
       $vars['product_call_btn'] = l('Заказать звонок', 'node/1',
         ['attributes' => ['class' => ['btn', 'btn-danger', 'btn-lg']]]
       );
-      // todo адрес страницы?
-      $vars['product_where_btn'] = l('Где купить', 'node/2',
+      $vars['product_where_btn'] = l('Где купить', 'node/4',
         ['attributes' => ['class' => ['btn', 'btn-default', 'btn-lg', 'btn-wide']]]
       );
 

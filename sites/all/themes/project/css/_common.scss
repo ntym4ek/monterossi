@@ -51,10 +51,18 @@
     }
   }
 
+  .main-menu.level-1 > li.first a {
+    padding-left: 0;
+  }
+
   @media #{$pad} {
     .branding img { height: 76px; }
     .global { display: block; }
   }
+}
+
+.page-title {
+  text-transform: uppercase;
 }
 
 .page-footer {

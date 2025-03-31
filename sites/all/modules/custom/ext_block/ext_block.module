@@ -30,6 +30,9 @@ function ext_block_block_info()
     'custom-block-video' => [
       'info' => t('CB | Видео'),
     ],
+    'custom-block-contacts' => [
+      'info' => t('CB | Контакты'),
+    ],
   ];
 }
 
@@ -102,6 +105,10 @@ function ext_block_theme()
     'custom-block-video'    => [
       'variables' => [],
       'template' => 'templates/block-video',
+    ],
+    'custom-block-contacts'    => [
+      'variables' => [],
+      'template' => 'templates/block-contacts',
     ],
   ];
 }
