@@ -127,32 +127,8 @@ function ext_block_products_get_popular()
   $cards = [];
 
   $products = [];
-  $products[] = [
-    'label' => 'Grande EX C3',
-    'image' => '/sites/default/files/images/blocks/test_product.png',
-    'description' => 'Синтетическое моторное масло для легковых автомобилей',
-    'tare' => [
-      ['label' => '1 л'],
-      ['label' => '4 л', 'selected' => true],
-      ['label' => '20 л'],
-      ['label' => '200 л'],
-    ],
-    'pao' => true,
-    'mid' => true,
-  ];
-  $products[] = [
-    'label' => 'Grande EX C3',
-    'image' => '/sites/default/files/images/blocks/test_product.png',
-    'description' => 'Синтетическое моторное масло для легковых автомобилей',
-    'tare' => [
-      ['label' => '1 л'],
-      ['label' => '4 л'],
-      ['label' => '20 л', 'selected' => true],
-      ['label' => '200 л'],
-    ],
-    'pao' => false,
-    'mid' => true,
-  ];
+  $products[] = ext_node_product_get_info(2);
+  $products[] = ext_node_product_get_info(3);
   $products[] = $products[0];
   $products[] = $products[1];
   $products[] = $products[0];

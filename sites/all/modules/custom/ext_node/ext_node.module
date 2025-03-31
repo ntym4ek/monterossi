@@ -1,0 +1,151 @@
+<?php
+
+/**
+ * Implements hook_menu_alter()
+ */
+function ext_node_menu_alter(&$items)
+{
+  // убрать материалы с Главной
+  $items['node']['page callback'] = 'ext_node_empty_front_page_callback';
+
+  // Кнопка "Удалить" в локальные задачи материала
+  // http://xandeadx.ru/blog/drupal/339
+  $items['node/%node/delete']['context'] = MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE;
+}
+
+/**
+ * menu callback
+ * убрать материалы с главной
+ */
+function ext_node_empty_front_page_callback()
+{
+  drupal_set_title('');
+  return [];
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function ext_node_preprocess_page(&$vars)
+{
+  if ($GLOBALS['theme'] == 'project') {
+    if (arg(0) == 'node' && isset($vars['node'])) {
+      // для страницы Препарата
+      if ($vars['node']->type == 'product') {
+        $vars['is_title_on'] = false;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function ext_node_preprocess_node(&$vars)
+{
+  $node = $vars['node'];
+
+  // ссылки всегда скрыты
+  hide($vars["content"]["links"]);
+
+  // -- Общие для всех видов просмотра -----------------------------------------
+  // -- Изображения
+  // так как в некоторых типах нод изображения выводятся в слайдере,
+  // то соберём свой массив для вывода
+  $images = [];
+  if (!empty($vars['content']['field_images']['#items'])) {
+    foreach ($vars['content']['field_images']['#items'] as $key => $file) {
+      $images[] = $vars['content']['field_images'][$key];
+    }
+  }
+  elseif (!empty($vars['content']['field_image'])) {
+    $images[] = $vars['content']['field_image'][0];
+  }
+  $vars['images'] = $images;
+
+  if ($node->type == 'product') {
+    $vars['product_info'] = ext_node_product_get_info($node->nid);
+  }
+
+  // -- Полный вид просмотра ---------------------------------------------------
+  if ($vars['view_mode'] == 'full') {
+    if ($node->type == 'product') {
+      // кнопка Поделиться
+      // -- Полная ссылка для социальных шар
+      $vars['product_call_btn'] = l('Заказать звонок', 'node/1',
+        ['attributes' => ['class' => ['btn', 'btn-danger', 'btn-lg']]]
+      );
+      // todo адрес страницы?
+      $vars['product_where_btn'] = l('Где купить', 'node/2',
+        ['attributes' => ['class' => ['btn', 'btn-default', 'btn-lg', 'btn-wide']]]
+      );
+
+    }
+  }
+}
+
+
+function ext_node_product_get_info($nid)
+{
+  $product_wr = entity_metadata_wrapper('node', $nid);
+
+  $adv = [];
+  foreach($product_wr->field_p_advantages_icon->getIterator() as $adv_wr) {
+    $adv[$adv_wr->getIdentifier()] = helper_term_get_info($adv_wr->getIdentifier());
+    $adv[$adv_wr->getIdentifier()]['icon_url'] = file_create_url($adv[$adv_wr->getIdentifier()]["field_image"]["uri"]);
+  }
+
+  $tare = [];
+  foreach($product_wr->field_p_tare->getIterator() as $tare_wr) {
+    $tare[$tare_wr->weight->value()] = helper_term_get_info($tare_wr->getIdentifier());
+  }
+  ksort($tare);
+
+  return [
+    'id' => $product_wr->getIdentifier(),
+    'title' => $product_wr->label(),
+    'label' => $product_wr->label(),
+    'image' => $product_wr->field_images[0]->file->url->value(),
+    'description' => strip_tags($product_wr->body->summary->value()),
+    'tare' => $tare,
+    'adv' => $adv,
+    'tds' => $product_wr->field_p_file_tds->value() ? $product_wr->field_p_file_tds->file->url->value() : '',
+    'passport' => $product_wr->field_p_file_passport->value() ? $product_wr->field_p_file_passport->file->url->value() : '',
+    'test' => $product_wr->field_p_file_test->value() ? $product_wr->field_p_file_test->file->url->value() : '',
+    'url' => url('node/' . $nid),
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ext_node_form_alter(&$form, &$form_state, $form_id)
+{
+  if ($GLOBALS['theme'] != 'seven' && isset($form["revision_information"]["#access"])) {
+    $form["revision_information"]["#access"] = false;
+    $form["options"]["#weight"] = $form["author"]["#weight"] - 1;
+  }
+}
+
+/**
+ * Implements hook_form_FORMID_alter().
+ */
+function ext_node_form_node_form_alter(&$form, &$form_state)
+{
+  if (in_array($form["type"]["#value"], ['article', 'product'])) {
+    // убрать неиспользуемые опции
+    $form["options"]["sticky"]["#access"] = false;
+    $form["author"]["#access"] = false;
+
+    // изменить формат поля Body на "Редактор текста", если формат ранее не был установлен
+    $lang = $GLOBALS['language']->language;
+    if (isset($form["body"][$lang][0]["#type"]) && $form["body"][$lang][0]["#type"] == 'text_format' && !$form["body"][$lang][0]["#format"]) {
+      $form["body"][$lang][0]["#format"] = 'filtered_html';
+    }
+
+    $form["actions"]["submit"]["#attributes"]['class'] = ['btn-primary'];
+  }
+}
+
+
+

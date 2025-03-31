@@ -19,7 +19,7 @@ function project_product_teaser($vars)
 {
   $product_info = $vars['product_info'];
 
-  $output =   '<a href="">';
+  $output =   '<a href="' . $product_info['url'] . '">';
   $output .=  '<div class="product product-teaser hover-raise">';
   $output .=    '<div class="p-label">' . $product_info['label'] . '</div>';
   $output .=    '<div class="p-image">';
@@ -56,7 +56,7 @@ function project_facetapi_title($vars)
     return '<span>Вязкость</span><i class="icon icon-13"></i>';
   }
   if (strpos($vars["facet"]["#settings"]->facet, 'field_p_specs') !== false) {
-    return '<span>Спецификации</span><i class="icon icon-13"></i>';
+    return '<span>Соответствия</span><i class="icon icon-13"></i>';
   }
 }
 

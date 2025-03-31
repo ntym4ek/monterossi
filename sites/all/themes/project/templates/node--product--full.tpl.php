@@ -79,7 +79,81 @@
  *
  * @ingroup themeable
  */
-
-  print theme('product_teaser', ['product_info' => $product_info]);
 ?>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
+  <div class="node-row">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <?php if (count($images)): ?>
+        <div class="node-images">
+          <div class="images">
+            <div id="slider-images" class="slider slider-images">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <?php foreach ($images as $image) {
+                    print '<div class="swiper-slide">'  .
+                            '<div class="image">' .
+                              drupal_render($image) .
+                            '</div>' .
+                          '</div>';
+                  } ?>
+                </div>
+              </div>
+              <?php if (count($images) > 1): ?>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev hide show-md"></div>
+                <div class="swiper-button-next hide show-md"></div>
+              <?php endif; ?>
+            </div>
+          </div>
+          <?php if (!empty($product_info['adv'])): ?>
+          <div class="image-stickers">
+            <?php foreach ($product_info['adv'] as $adv): ?>
+            <div class="image-sticker"><img src="<?php print $adv['icon_url']; ?>" alt="<?php print $adv['label']; ?>"></div>
+            <?php endforeach; ?>
+          </div>
+          <?php endif; ?>
+        </div>
+        <?php endif; ?>
+      </div>
+
+      <div class="col-xs-12 col-md-8">
+        <div class="node-header">
+          <div class="node-title">
+            <h1><?php print $title; ?></h1>
+          </div>
+        </div>
+        <div class="node-text">
+          <?php print render($content['body']); ?>
+        </div>
+        <div class="node-specs">
+          <?php print render($content['field_p_specs']); ?>
+        </div>
+        <div class="node-advantages">
+          <?php print render($content['field_p_advantages']); ?>
+        </div>
+
+        <?php if ($product_info['tds'] || $product_info['passport'] || $product_info['test']): ?>
+        <div class="node-files">
+          <?php if ($product_info['tds']): ?>
+          <div class="file"><a href="<?php print $product_info['tds']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-31"></i>TDS</a></div>
+          <?php endif; ?>
+          <?php if ($product_info['passport']): ?>
+          <div class="file"><a href="<?php print $product_info['passport']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-32"></i>Паспорт продукта</a></div>
+          <?php endif; ?>
+          <?php if ($product_info['test']): ?>
+          <div class="file"><a href="<?php print $product_info['test']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-33"></i>Протокол испытаний</a></div>
+          <?php endif; ?>
+        </div>
+        <?php endif; ?>
+
+        <div class="node-actions">
+          <div class="action"><?php print $product_call_btn; ?></div>
+          <div class="action"><?php print $product_where_btn; ?></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
