@@ -2370,6 +2370,12 @@ ul.menu {
     .carousel.outer-navigation > .swiper-button-next {
       --swiper-navigation-sides-offset: -4rem; } }
 
+.slider-thumbs .swiper-slide {
+  border: 1px solid transparent;
+  border-radius: 20px; }
+  .slider-thumbs .swiper-slide.swiper-slide-thumb-active {
+    border-color: #ccc; }
+
 .btn {
   font-weight: 700; }
 
@@ -2855,19 +2861,33 @@ ul.menu {
       padding-top: 0; } }
 
 .node-product.node-full h1 {
-  margin-bottom: 2rem; }
+  margin: 0 0 2rem 0; }
 .node-product.node-full .node-row {
   margin-bottom: 2rem; }
-.node-product.node-full .node-images {
+.node-product.node-full .node-images .images-thumbs {
+  display: inline-block;
+  width: 25%;
+  padding-right: 1rem; }
+  .node-product.node-full .node-images .images-thumbs .image {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: .5rem; }
+  .node-product.node-full .node-images .images-thumbs img {
+    height: 100%; }
+.node-product.node-full .node-images .images {
+  display: inline-block;
+  vertical-align: top;
+  width: 74%;
   position: relative; }
-  .node-product.node-full .node-images .image {
+  .node-product.node-full .node-images .images .image {
     width: 70%; }
-  .node-product.node-full .node-images .image-stickers {
+  .node-product.node-full .node-images .images .image-stickers {
     position: absolute;
     right: 0;
     top: 0;
     z-index: 1; }
-  .node-product.node-full .node-images .image-sticker {
+  .node-product.node-full .node-images .images .image-sticker {
     margin-top: 1rem;
     height: 50px; }
 .node-product.node-full .field {

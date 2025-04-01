@@ -87,33 +87,35 @@
       <div class="col-xs-12 col-md-4">
         <?php if (count($images)): ?>
         <div class="node-images">
+          <div class="images-thumbs">
+            <div id="slider-images-thumbs" class="slider-thumbs">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <?php foreach ($images as $image) {
+                    print '<div class="swiper-slide"><div class="image">' . drupal_render($image) . '</div></div>';
+                  } ?>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="images">
             <div id="slider-images" class="slider slider-images">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <?php foreach ($images as $image) {
-                    print '<div class="swiper-slide">'  .
-                            '<div class="image">' .
-                              drupal_render($image) .
-                            '</div>' .
-                          '</div>';
+                    print '<div class="swiper-slide"><div class="image">' . drupal_render($image) . '</div></div>';
                   } ?>
                 </div>
               </div>
-              <?php if (count($images) > 1): ?>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev hide show-md"></div>
-                <div class="swiper-button-next hide show-md"></div>
-              <?php endif; ?>
             </div>
+            <?php if (!empty($product_info['adv'])): ?>
+              <div class="image-stickers">
+                <?php foreach ($product_info['adv'] as $adv): ?>
+                  <div class="image-sticker"><img src="<?php print $adv['icon_url']; ?>" alt="<?php print $adv['label']; ?>"></div>
+                <?php endforeach; ?>
+              </div>
+            <?php endif; ?>
           </div>
-          <?php if (!empty($product_info['adv'])): ?>
-          <div class="image-stickers">
-            <?php foreach ($product_info['adv'] as $adv): ?>
-            <div class="image-sticker"><img src="<?php print $adv['icon_url']; ?>" alt="<?php print $adv['label']; ?>"></div>
-            <?php endforeach; ?>
-          </div>
-          <?php endif; ?>
         </div>
         <?php endif; ?>
       </div>

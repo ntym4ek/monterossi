@@ -8,7 +8,6 @@
           $(this).parents(".block-facetapi").find(".content").slideToggle(200).prev().toggleClass("active");
         });
       });
-
     }
   };
 })(jQuery);
