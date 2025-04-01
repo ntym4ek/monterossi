@@ -33,6 +33,9 @@ function ext_block_block_info()
     'custom-block-contacts' => [
       'info' => t('CB | Контакты'),
     ],
+    'custom-block-dist' => [
+      'info' => t('CB | Дистрибюторам'),
+    ],
   ];
 }
 
@@ -109,6 +112,10 @@ function ext_block_theme()
     'custom-block-contacts'    => [
       'variables' => [],
       'template' => 'templates/block-contacts',
+    ],
+    'custom-block-dist'    => [
+      'variables' => [],
+      'template' => 'templates/block-dist',
     ],
   ];
 }

@@ -16,13 +16,6 @@
             slidesPerView: 4,
             direction: "vertical",
             watchSlidesProgress: true,
-            on: {
-              init: (swiper) => {
-                let totalGap = swiper.passedParams.spaceBetween * (swiper.passedParams.slidesPerView - 1);
-                let containerHeight = swiper.passedParams.slidesPerView * swiper.slides[0].clientHeight + totalGap;
-                swiper.el.style.height = containerHeight + 'px';
-              },
-            },
           };
           new Swiper(swiperThumbs[0], optionsT);
         }
