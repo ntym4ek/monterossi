@@ -3,12 +3,34 @@
     attach: function (context, settings) {
 
       // --- Инициализировать слайдеры и карусели ------------------------------
-      // навигация и пейджер вынесены за пределы слайдера,
-      // поэтому классы указываются принудительно
       $(".slider").each(function() {
 
+        // Если нужен Thumbs slider для основного слайдера, нужно вне основного слайдера
+        // создать ещё один с тем же набором слайдов, тем же id с суффиксом "-thumbs" и классом slider-thumbs.
+        // Thumbs slider будет автоматически привязан к основному слайдеру.
+        let id = $(this).attr("id");
+        var swiperThumbs = $(context).find("#" + id + "-thumbs .swiper");
+        if (swiperThumbs.length) {
+          let optionsT = {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            direction: "vertical",
+            watchSlidesProgress: true,
+            on: {
+              init: (swiper) => {
+                let totalGap = swiper.passedParams.spaceBetween * (swiper.passedParams.slidesPerView - 1);
+                let containerHeight = swiper.passedParams.slidesPerView * swiper.slides[0].clientHeight + totalGap;
+                swiper.el.style.height = containerHeight + 'px';
+              },
+            },
+          };
+          new Swiper(swiperThumbs[0], optionsT);
+        }
+
         var swiper = $(this).find(".swiper");
-        if (swiper) {
+        if (swiper.length) {
+          // навигация и пейджер вынесены за пределы слайдера,
+          // поэтому классы указываются принудительно
           var pager = $(this).find("> .swiper-pagination");
           var nextEl = $(this).find("> .swiper-button-next");
           var prevEl = $(this).find("> .swiper-button-prev");
@@ -26,6 +48,10 @@
               prevEl: prevEl ? prevEl[0] : null,
             },
           };
+
+          if (swiperThumbs.length) {
+            options.thumbs = { swiper: swiperThumbs[0] };
+          }
 
           var autoHeight = $(this).data("autoheight");
           if (autoHeight) {

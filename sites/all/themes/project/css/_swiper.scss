@@ -51,3 +51,11 @@
     }
   }
 }
+
+.slider-thumbs {
+  .swiper-slide {
+    border: 1px solid transparent;
+    border-radius: $btn-border-radius-base;
+    &.swiper-slide-thumb-active { border-color: $gray-light; }
+  }
+}
