@@ -915,7 +915,7 @@ textarea {
   line-height: inherit; }
 
 h1, .h1 {
-  font-size: 2.33rem;
+  font-size: 2rem;
   font-weight: 700; }
 
 h2, .h2 {
@@ -1073,7 +1073,7 @@ div.messages {
   padding-top: 4rem;
   max-width: 90%; }
 .page-banner .banner-title {
-  font-size: 1.631rem;
+  font-size: 1.4rem;
   font-weight: 800;
   line-height: 1.1; }
 .page-banner .banner-prefix .share {
@@ -1091,7 +1091,7 @@ div.messages {
   .page-banner .screen-width {
     height: 560px; }
   .page-banner .banner-title {
-    font-size: 1.864rem; }
+    font-size: 1.6rem; }
   .page-banner .banner-title-wrapper {
     padding-top: 0;
     max-width: 60%; }
@@ -1101,7 +1101,7 @@ div.messages {
     bottom: 15%; } }
 @media only screen and (min-width: 1366px) {
   .page-banner .banner-title {
-    font-size: 2.33rem; }
+    font-size: 2rem; }
   .page-banner .banner-title-wrapper {
     max-width: 50%; } }
 
@@ -1848,9 +1848,9 @@ fieldset {
 label,
 .label,
 .field .field-label {
-  color: #aaa;
+  color: #00913F;
   font-weight: 400;
-  margin-bottom: 6px; }
+  margin-bottom: 3px; }
 
 .form-item,
 .field-type-text,
@@ -1993,9 +1993,9 @@ label,
   color: #333; }
 
 fieldset .fieldset-legend {
-  color: #333;
-  font-weight: 500;
-  margin-bottom: 6px; }
+  color: #00913F;
+  font-weight: 400;
+  margin-bottom: 3px; }
 
 .field-type-text-with-summary .text-summary-wrapper .form-item,
 .field-type-text-long .text-summary-wrapper .form-item {
@@ -2134,7 +2134,7 @@ ul.menu {
     position: absolute;
     z-index: 10;
     background-color: #fff;
-    min-width: 225px;
+    min-width: 270px;
     padding: 0.5rem 0;
     transition: all 200ms; }
     .menu-wr .sub-menu > li {
@@ -2482,7 +2482,8 @@ ul.menu {
     top: 0;
     z-index: 1; }
   .product-teaser .p-sticker {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    max-width: 70px; }
   .product-teaser .p-description {
     color: #aaa;
     font-size: 0.889rem;
@@ -2871,7 +2872,7 @@ ul.menu {
   height: 300px; }
   .block-dist .row-1 .content {
     color: #fff;
-    font-size: 2.33rem;
+    font-size: 2rem;
     font-weight: 700;
     display: flex;
     flex-wrap: wrap;
@@ -2961,7 +2962,7 @@ ul.menu {
       z-index: 1; }
     .node-product.node-full .node-images .images .image-sticker {
       margin-top: 1rem;
-      height: 50px; }
+      width: 100px; }
 .node-product.node-full .field {
   border-bottom: 1px solid #606060; }
   .node-product.node-full .field .field-label {
@@ -2987,5 +2988,35 @@ ul.menu {
     margin-bottom: 2rem; }
   .node-product.node-full .node-row {
     margin-bottom: 4rem; } }
+
+.page-admin-content .exposed-filters > .form-wrapper {
+  display: flex; }
+  .page-admin-content .exposed-filters > .form-wrapper > .form-actions {
+    margin-top: 1rem; }
+.page-admin-content table {
+  width: 100%; }
+
+.page-node-add form,
+.page-node-edit form {
+  margin-bottom: 3rem; }
+.page-node-add .form-checkboxes,
+.page-node-edit .form-checkboxes {
+  display: flex;
+  flex-wrap: wrap; }
+.page-node-add .form-type-checkbox,
+.page-node-edit .form-type-checkbox {
+  margin-right: 1rem; }
+.page-node-add .field-widget-image-image table,
+.page-node-edit .field-widget-image-image table {
+  width: 100%; }
+.page-node-add #edit-body-und-0-format,
+.page-node-edit #edit-body-und-0-format {
+  display: none; }
+.page-node-add fieldset,
+.page-node-edit fieldset {
+  border-color: #ccc; }
+  .page-node-add fieldset .fieldset-description,
+  .page-node-edit fieldset .fieldset-description {
+    margin-bottom: 1rem; }
 
 /*# sourceMappingURL=project.css.map */

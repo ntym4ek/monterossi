@@ -25,8 +25,9 @@ function project_product_teaser($vars)
   $output .=    '<div class="p-image">';
   $output .=      '<div class="image"><img src="' . $product_info['image'] . '" alt="' . $product_info['label'] . '"></div>';
   $output .=      '<div class="p-stickers">';
-  $output .=        empty($product_info['pao']) ? '' : '<div class="p-sticker"><img src="/sites/default/files/images/etc/pao.png" alt="Сертификат PAO"></div>';
-  $output .=        empty($product_info['mid']) ? '' : '<div class="p-sticker"><img src="/sites/default/files/images/etc/mid.png" alt="Сертификат MID SAPS"></div>';
+  foreach ($product_info['adv'] as $adv) {
+    $output .= '<div class="p-sticker"><img src="' . $adv['icon_url'] . '" alt="' . $adv['label'] . '"></div>';
+  }
   $output .=      '</div>';
   $output .=    '</div>';
   $output .=    '<div class="p-description">';

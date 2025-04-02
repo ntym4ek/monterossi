@@ -8,6 +8,8 @@ $content-well-max-width-2: 1240px;
 $font-url:                'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap';
 $page-bkg:                #F5F5F5;
 
+$font-size-h1:            2rem;           // 36
+
 $brand-blue:              #213A6E;
 $brand-cyan:              #5bc0de;
 $brand-green:             #00913F;
@@ -41,6 +43,7 @@ $header-shadow:           none;
 $menu-item-color:         $gray-darkest;
 $menu-item-hover-color:   $gray-dark;
 $menu-item-active-color:  $gray-darkest;
+$submenu-min-width:       270px;
 
 // подвал
 //
@@ -55,3 +58,6 @@ $padding-large-horizontal:  20px;
 
 $input-focus-color:         $brand-blue;
 $input-bg-color:            transparent;
+
+$label-color:               $brand-green;
+$label-margin:              3px;

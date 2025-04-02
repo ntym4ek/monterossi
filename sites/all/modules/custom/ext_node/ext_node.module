@@ -43,40 +43,42 @@ function ext_node_preprocess_page(&$vars)
  */
 function ext_node_preprocess_node(&$vars)
 {
-  $node = $vars['node'];
+  if ($GLOBALS['theme'] == 'project' && isset($vars['node'])) {
+    $node = $vars['node'];
 
-  // ссылки всегда скрыты
-  hide($vars["content"]["links"]);
+    // ссылки всегда скрыты
+    hide($vars["content"]["links"]);
 
-  // -- Общие для всех видов просмотра -----------------------------------------
-  // -- Изображения
-  // так как в некоторых типах нод изображения выводятся в слайдере,
-  // то соберём свой массив для вывода
-  $images = [];
-  if (!empty($vars['content']['field_images']['#items'])) {
-    foreach ($vars['content']['field_images']['#items'] as $key => $file) {
-      $images[] = $vars['content']['field_images'][$key];
+    // -- Общие для всех видов просмотра -----------------------------------------
+    // -- Изображения
+    // так как в некоторых типах нод изображения выводятся в слайдере,
+    // то соберём свой массив для вывода
+    $images = [];
+    if (!empty($vars['content']['field_images']['#items'])) {
+      foreach ($vars['content']['field_images']['#items'] as $key => $file) {
+        $images[] = $vars['content']['field_images'][$key];
+      }
     }
-  }
-  elseif (!empty($vars['content']['field_image'])) {
-    $images[] = $vars['content']['field_image'][0];
-  }
-  $vars['images'] = $images;
+    elseif (!empty($vars['content']['field_image'])) {
+      $images[] = $vars['content']['field_image'][0];
+    }
+    $vars['images'] = $images;
 
-  if ($node->type == 'product') {
-    $vars['product_info'] = ext_node_product_get_info($node->nid);
-  }
-
-  // -- Полный вид просмотра ---------------------------------------------------
-  if ($vars['view_mode'] == 'full') {
     if ($node->type == 'product') {
-      $vars['product_call_btn'] = l('Заказать звонок', 'node/1',
-        ['attributes' => ['class' => ['btn', 'btn-danger', 'btn-lg']]]
-      );
-      $vars['product_where_btn'] = l('Где купить', 'node/4',
-        ['attributes' => ['class' => ['btn', 'btn-default', 'btn-lg', 'btn-wide']]]
-      );
+      $vars['product_info'] = ext_node_product_get_info($node->nid);
+    }
 
+    // -- Полный вид просмотра ---------------------------------------------------
+    if ($vars['view_mode'] == 'full') {
+      if ($node->type == 'product') {
+        $vars['product_call_btn'] = l('Заказать звонок', 'node/1',
+          ['attributes' => ['class' => ['btn', 'btn-danger', 'btn-lg']]]
+        );
+        $vars['product_where_btn'] = l('Где купить', 'node/4',
+          ['attributes' => ['class' => ['btn', 'btn-default', 'btn-lg', 'btn-wide']]]
+        );
+
+      }
     }
   }
 }
@@ -87,7 +89,7 @@ function ext_node_product_get_info($nid)
   $product_wr = entity_metadata_wrapper('node', $nid);
 
   $adv = [];
-  foreach($product_wr->field_p_advantages_icon->getIterator() as $adv_wr) {
+  foreach($product_wr->field_p_advantages_icon->getIterator() as $index => $adv_wr) {
     $adv[$adv_wr->getIdentifier()] = helper_term_get_info($adv_wr->getIdentifier());
     $adv[$adv_wr->getIdentifier()]['icon_url'] = file_create_url($adv[$adv_wr->getIdentifier()]["field_image"]["uri"]);
   }

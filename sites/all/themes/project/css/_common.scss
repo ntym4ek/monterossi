@@ -106,7 +106,10 @@
   .p-stickers {
     position: absolute; right: 0; top: 0; z-index: 1;
   }
-  .p-sticker { margin-top: 1rem; }
+  .p-sticker {
+    margin-top: 1rem;
+    max-width: 70px;
+  }
   .p-description {
     color: $text-muted; font-size: $font-size-small; text-align: center;
     margin-bottom: 1rem;
