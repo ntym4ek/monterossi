@@ -6,7 +6,7 @@
   h1 { margin: 0 0 2rem 0; }
   .node-row { margin-bottom: 2rem; }
   .node-images {
-    height: 345px;
+    height: 300px;
     .images-thumbs {
       display: inline-block;
       width: 25%; height: 100%;
@@ -25,13 +25,13 @@
       width: 72%;
       position: relative;
       .image { width: 70%; }
-      .image-stickers {
-        position: absolute; right: 0; top: 0; z-index: 1;
-      }
-      .image-sticker {
-        margin-top: 1rem;
-        width: 100px;
-      }
+    }
+    .image-stickers {
+      position: absolute; right: 0; top: 0; z-index: 1;
+    }
+    .image-sticker {
+      margin-top: 1rem;
+      width: 70px;
     }
   }
   .field {
@@ -46,21 +46,36 @@
     }
   }
   .node-files {
-    display: flex;
-    margin-bottom: 3rem;
-    .file { margin-right: 1rem; }
+    display: flex; flex-wrap: wrap;
+    margin-bottom: 2rem;
+    .file { margin: 0 1rem 0.5rem 0; }
   }
   .node-actions {
-    display: flex;
-    margin-bottom: 3rem;
-    .action { margin-right: 1rem; }
+    display: flex; flex-wrap: wrap; justify-content: center;
+    .action { margin: 0 1rem 1rem 0; }
+    .action:first-child { width: 100%; }
+    .action:first-child a { width: 100%; }
   }
 
-  @media #{$tablet} {
-    .field {
-      margin-bottom: 2rem;
+  @media #{$pad} {
+    .node-images {
+      height: 425px;
+      .images { width: 55%; }
     }
+    .node-actions {
+      flex-wrap: nowrap; justify-content: start;
+      .action:first-child { width: initial; }
+      .action:first-child a { width: initial; }
+    }
+  }
+  @media #{$tablet} {
+    .field { margin-bottom: 2rem; }
     .node-row { margin-bottom: 4rem; }
+    .node-images {
+      height: 345px;
+      .images { width: 72%; }
+    }
+    .image-sticker { width: 100px; }
   }
 }
 

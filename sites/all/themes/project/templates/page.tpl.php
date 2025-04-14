@@ -45,23 +45,22 @@
                 </div>
               </div>
 
-              <div class="col hide-xs show-md">
+              <div class="col hide-xs show-lg">
                 <div class="menu-wr">
                   <?php if ($secondary_nav): print $secondary_nav; endif; ?>
                 </div>
               </div>
-              <?php if (!empty($cart_link)): ?>
-              <div class="col">
-                <?php print $cart_link; ?>
-              </div>
-              <?php endif; ?>
               <?php if (!empty($language_link)): ?>
-              <div class="col hide-xs show-md">
+              <div class="col hide-xs show-lg">
                 <div class="language-switch">
                   <?php print $language_link; ?>
                 </div>
               </div>
               <?php endif; ?>
+
+              <div class="col show-xs hide-lg">
+                <div class="nav-mobile-label"><div class="label"><div class="icon"></div></div></div>
+              </div>
 
             </div>
           </div>
@@ -71,10 +70,6 @@
       <div class="r2">
         <div class="container">
           <div class="row middle-xs">
-
-            <div class="col-xs-12 show-xs hide-lg">
-              <div class="nav-mobile-label"><div class="label"><div class="icon"></div></div></div>
-            </div>
 
             <div class="col-xs-9 hide-xs show-lg">
               <div class="menu-wr">
@@ -192,12 +187,12 @@
     <div class="page-footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-6 col-md-1">
+          <div class="col-xs-3 col-md-1">
             <div class="branding">
               <div class="image"><a href="/"><img src="/sites/all/themes/project/images/logo/logo.png" alt="MONTEROSSI" /></a></div>
             </div>
           </div>
-          <div class="col-xs-6 col-md-4">
+          <div class="col-xs-8 col-md-4">
             <ul class="menu company">
               <li><?php print l(t('About us'), ''); ?></li>
               <li><?php print l(t('For distributors'), 'node/5'); ?></li>
@@ -206,7 +201,7 @@
             </ul>
           </div>
 
-          <div class="col-xs-12 col-md-4">
+          <div class="col-xs-6 col-md-4">
             <ul class="menu directions">
               <li><?php print l(t('Motor oils for passenger cars'), '', ['html' => true]); ?></li>
               <li><?php print l(t('Motor oils for trucks'), '', ['html' => true]); ?></li>

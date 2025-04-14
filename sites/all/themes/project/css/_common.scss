@@ -18,7 +18,7 @@
   }
   .r2 {
     display: flex; align-items: center;
-    height: 68px;
+    height: 0;
   }
   .branding {
     justify-content: flex-start; align-items: center;
@@ -51,6 +51,7 @@
     }
   }
 
+  .nav-mobile-label { display: flex; justify-content: right; }
   .main-menu.level-1 > li.first a {
     padding-left: 0;
   }
@@ -58,8 +59,11 @@
   @media #{$pad} {
     .branding img { height: 76px; }
     .global { display: block; }
+    .r2 { height: 68px; }
   }
 }
+.menu-mobile-link { border-top: 1px solid $menu-mobile-divider-clr; }
+
 
 .page-title {
   text-transform: uppercase;
@@ -100,6 +104,7 @@
     margin: 1rem 0;
   }
   .p-image {
+    margin-bottom: 1rem;
     position: relative;
     .image { width: 55%; } // край предмета по середине с учётом правой отбивки
   }
@@ -107,8 +112,8 @@
     position: absolute; right: 0; top: 0; z-index: 1;
   }
   .p-sticker {
-    margin-top: 1rem;
-    max-width: 70px;
+    &:not(:first-child) { margin-top: 1rem; }
+    max-width: 65px;
   }
   .p-description {
     color: $text-muted; font-size: $font-size-small; text-align: center;
@@ -139,7 +144,7 @@
 .view {
   &.view-catalog {
     .view-content { @include row(); }
-    .views-row { @include col('xs', 12); @include col('md', 4); }
+    .views-row { @include col('xs', 12); @include col('md', 6); @include col('xl', 3); }
   }
 }
 

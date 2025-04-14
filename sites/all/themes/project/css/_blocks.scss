@@ -19,31 +19,43 @@
     height: 400px;
     position: relative;
     .image {
-      position: absolute; top:0; bottom: 0;left:0; right: 0; z-index: 1;
+      position: absolute; top: 0; bottom: 0;left:0; right: 0; z-index: 1;
       background-size: cover; background-position: center;
     }
   }
   .swiper-pagination-bullet { border: 1px solid #fff; }
 
   .content {
-    padding-top: 4rem;
+    padding-top: 2rem;
     position: relative; z-index: 2;
     .h1 {
-      font-size: 80px; line-height: 1;
+      font-size: 34px; line-height: 1;
     }
     .h2 {
-      font-size: 44px;
-      margin: 2rem 0;
+      font-size: 26px;
+      margin: 1rem 0;
     }
-    p { line-height: 1.8; }
+    p { line-height: 1.2; }
     .btn {
       @include button-variant(#fff, transparent, #fff);
-      margin-top: 2rem;
+      margin-top: 1rem;
       min-width: 245px;
     }
   }
 
   @media #{$tablet} {
+    .content {
+      padding-top: 4rem;
+      .h1 {
+        font-size: 80px; line-height: 1;
+      }
+      .h2 {
+        font-size: 44px;
+        margin: 2rem 0;
+      }
+      .btn { margin-top: 2rem; }
+
+    }
   }
   @media #{$laptop} {
     .swiper-slide { height: 668px; }
@@ -62,7 +74,7 @@
     span { color: $brand-red; font-size: 3rem; font-weight: 700; }
     p {
       font-weight: 500;
-      margin: 1rem auto;
+      margin: 0 auto 2rem;
       max-width: 215px;
     }
   }
@@ -72,6 +84,7 @@
     .counter {
       margin-bottom: 0;
       span { font-size: 3rem; }
+      p { margin: 1rem auto; }
     }
   }
   @media #{$laptop} {
@@ -92,7 +105,7 @@
     border-radius: 32px;
     overflow: hidden;
   }
-  .btn { margin-top: 1rem; }
+  .btn { margin: 1rem 0; }
 }
 
 .block-quality {
@@ -137,7 +150,7 @@
     overflow: hidden;
   }
   h2 {
-    text-transform: uppercase;
+    font-size: $font-size-h3; text-transform: uppercase;
     margin-top: 0;
   }
   .text { padding: 3rem; }
@@ -146,6 +159,10 @@
     overflow: hidden;
   }
   .btn { margin-top: 1rem; }
+
+  @media #{$pad} {
+    h2 { font-size: $font-size-h2; }
+  }
 }
 
 .block-categories {
@@ -155,13 +172,22 @@
   }
   .category {
     display: flex; flex-wrap: wrap; justify-content: center;
+    margin-bottom: 2rem;
   }
   .col-xs-12:not(:last-child) { border-right: 1px solid $gray-light; }
-  .image { height: 290px; }
+  .image {
+    display: flex; justify-content: center;
+    height: 290px; width: 100%;
+    img { height: 100%; }
+  }
   .title {
     font-size: $font-size-large; font-weight: 700; text-align: center;
   }
   a { color: inherit; }
+
+  @media #{$pad} {
+    .category { margin-bottom: 0; }
+  }
 }
 
 .block-popular {

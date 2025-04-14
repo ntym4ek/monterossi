@@ -3,7 +3,7 @@
 <div class="block-consulting">
   <div class="content">
     <div class="row">
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-lg-6">
         <div class="text">
           <h2>Профессиональная консультация</h2>
 
@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-lg-6">
         <div class="image"><img src="/sites/default/files/images/blocks/consulting.jpg" alt="Консультация MONTEROSSI"></div>
       </div>
     </div>

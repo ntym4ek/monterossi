@@ -2,6 +2,7 @@
 
 ?>
 <div class="block-video">
+  <div class="screen-width">
     <div class="container">
       <div class="video">
         <video controls autoplay muted loop width="100%" poster="/sites/default/files/video/about.jpg" preload="none">
@@ -9,4 +10,5 @@
         </video>
       </div>
     </div>
+  </div>
 </div>

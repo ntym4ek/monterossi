@@ -8,7 +8,7 @@
       <a href="#">
         <div class="category hover-raise">
           <div class="image"><img src="/sites/default/files/images/blocks/cat-pass.png" alt="Моторные масла MONTEROSSI для легковых автомобилей"></div>
-          <div class="title"><a href="#">Моторные масла для&nbsp;легковых автомобилей</a></div>
+          <div class="title">Моторные масла для&nbsp;легковых автомобилей</div>
         </div>
       </a>
     </div>
@@ -16,7 +16,7 @@
       <a href="#">
         <div class="category hover-raise">
           <div class="image"><img src="/sites/default/files/images/blocks/cat-prom.png" alt="Моторные масла MONTEROSSI для грузовых автомобилей"></div>
-          <div class="title"><a href="#">Моторные масла для&nbsp;грузовых автомобилей</a></div>
+          <div class="title">Моторные масла для&nbsp;грузовых автомобилей</div>
         </div>
       </a>
     </div>
@@ -24,7 +24,7 @@
       <a href="#">
         <div class="category hover-raise">
           <div class="image"><img src="/sites/default/files/images/blocks/cat-trans.png" alt="Трансмиссионные масла MONTEROSSI"></div>
-          <div class="title"><a href="#">Трансмиссионные<br>масла</a></div>
+          <div class="title">Трансмиссионные<br>масла</div>
         </div>
       </a>
     </div>

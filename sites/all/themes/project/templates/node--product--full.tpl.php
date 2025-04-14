@@ -84,7 +84,7 @@
 
   <div class="node-row">
     <div class="row">
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-lg-4">
         <?php if (count($images)): ?>
         <div class="node-images">
           <div class="images-thumbs">
@@ -120,7 +120,7 @@
         <?php endif; ?>
       </div>
 
-      <div class="col-xs-12 col-md-8">
+      <div class="col-xs-12 col-lg-8">
         <div class="node-header">
           <div class="node-title">
             <h1><?php print $title; ?></h1>
