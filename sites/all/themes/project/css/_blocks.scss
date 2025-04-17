@@ -365,3 +365,24 @@
     }
   }
 }
+
+// блок встроен в страницу node/11
+.block-support {
+  .contacts {
+    margin: 2rem 0;
+    > div { margin: 1rem 0; }
+    a { color: $text-color; font-weight: 700; }
+  }
+  .actions {
+    margin-bottom: 1rem;
+    a { margin: 0 2rem 1rem 0; }
+  }
+
+
+  @media #{$tablet} {
+    .btn {
+      @include button-size($padding-large-vertical, $padding-large-horizontal, $input-font-size-large, $line-height-large, $btn-border-radius-large, $input-height-large);
+    }
+    .text { padding-right: 2rem; }
+  }
+}
