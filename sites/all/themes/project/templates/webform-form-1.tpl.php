@@ -23,32 +23,23 @@
 
 <div class="screen-width">
   <div class="container">
-    <?php if (isset($form['complete'])): ?>
-
-      <h2><?php print 'Сообщение отправлено'; ?></h2>
-      <?php print drupal_render($form['complete']); ?>
-
-    <?php else: ?>
-
-      <h2><?php print 'Оставить сообщение'; ?></h2>
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <?php print drupal_render($form['submitted']['name']); ?>
-          <?php print drupal_render($form['submitted']['phone']); ?>
-          <?php print drupal_render($form['submitted']['email']); ?>
-          <?php print drupal_render($form['submitted']['theme']); ?>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <?php print drupal_render($form['submitted']['message']); ?>
-        </div>
-        <div class="col-sm-12">
-          <?php print drupal_render($form['fz152_agreement']); ?>
-          <?php print drupal_render($form['actions']); ?>
-          <?php print drupal_render_children($form); ?>
-        </div>
+    <h2><?php print 'Оставить сообщение'; ?></h2>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <?php print drupal_render($form['submitted']['name']); ?>
+        <?php print drupal_render($form['submitted']['phone']); ?>
+        <?php print drupal_render($form['submitted']['email']); ?>
+        <?php print drupal_render($form['submitted']['theme']); ?>
       </div>
-
-    <?php endif; ?>
+      <div class="col-sm-12 col-md-6">
+        <?php print drupal_render($form['submitted']['message']); ?>
+      </div>
+      <div class="col-sm-12">
+        <?php print drupal_render($form['fz152_agreement']); ?>
+        <?php print drupal_render($form['actions']); ?>
+        <?php print drupal_render_children($form); ?>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -2519,6 +2519,72 @@ ul.menu {
   border-left-color: transparent !important;
   border-right-color: transparent !important; }
 
+.ui-widget-overlay {
+  background: #000;
+  opacity: .7; }
+
+.ui-widget {
+  font-size: initial;
+  font-family: inherit; }
+
+.ui-dialog {
+  color: #fff;
+  background-color: #7D7C7C;
+  background-image: none;
+  border: none; }
+  .ui-dialog .btn {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff; }
+    .ui-dialog .btn:focus, .ui-dialog .btn.focus {
+      color: #333;
+      background-color: #e6e6e6;
+      border-color: #bfbfbf; }
+    .ui-dialog .btn:hover {
+      color: #333;
+      background-color: #e6e6e6;
+      border-color: #e0e0e0; }
+    .ui-dialog .btn:active, .ui-dialog .btn.active, .open > .ui-dialog .btn.dropdown-toggle {
+      color: #333;
+      background-color: #e6e6e6;
+      background-image: none;
+      border-color: #e0e0e0; }
+      .ui-dialog .btn:active:hover, .ui-dialog .btn:active:focus, .ui-dialog .btn:active.focus, .ui-dialog .btn.active:hover, .ui-dialog .btn.active:focus, .ui-dialog .btn.active.focus, .open > .ui-dialog .btn.dropdown-toggle:hover, .open > .ui-dialog .btn.dropdown-toggle:focus, .open > .ui-dialog .btn.dropdown-toggle.focus {
+        color: #333;
+        background-color: #d4d4d4;
+        border-color: #bfbfbf; }
+    .ui-dialog .btn.disabled:hover, .ui-dialog .btn.disabled:focus, .ui-dialog .btn.disabled.focus, .ui-dialog .btn[disabled]:hover, .ui-dialog .btn[disabled]:focus, .ui-dialog .btn[disabled].focus, fieldset[disabled] .ui-dialog .btn:hover, fieldset[disabled] .ui-dialog .btn:focus, fieldset[disabled] .ui-dialog .btn.focus {
+      background-color: #fff;
+      border-color: #fff; }
+    .ui-dialog .btn .badge {
+      color: #fff;
+      background-color: #333; }
+  .ui-dialog .form-item .form-text, .ui-dialog .form-item .form-text::placeholder,
+  .ui-dialog .form-item .form-textarea,
+  .ui-dialog .form-item .form-textarea::placeholder,
+  .ui-dialog .form-item .form-select,
+  .ui-dialog .form-item .form-select::placeholder {
+    color: #fff; }
+  .ui-dialog .form-item .form-select option {
+    background: #7D7C7C; }
+  .ui-dialog .ui-dialog-titlebar {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.222rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem; }
+  .ui-dialog .ui-dialog-content {
+    background: none;
+    color: inherit;
+    overflow: hidden;
+    padding: 0 2rem 1rem; }
+  .ui-dialog .ui-dialog-titlebar-close {
+    background-image: none;
+    color: inherit;
+    right: 1rem;
+    top: 45%; }
+
 .view.view-catalog .view-content {
   margin: 0 -1rem;
   display: -webkit-flex;
