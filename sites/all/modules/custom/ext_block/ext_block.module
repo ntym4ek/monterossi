@@ -36,6 +36,9 @@ function ext_block_block_info()
     'custom-block-dist' => [
       'info' => t('CB | Дистрибюторам'),
     ],
+    'custom-block-about' => [
+      'info' => t('CB | О компании'),
+    ],
   ];
 }
 
@@ -117,6 +120,10 @@ function ext_block_theme()
       'variables' => [],
       'template' => 'templates/block-dist',
     ],
+    'custom-block-about'    => [
+      'variables' => [],
+      'template' => 'templates/block-about',
+    ],
   ];
 }
 
@@ -140,17 +147,18 @@ function ext_block_products_get_popular()
 {
   $cards = [];
 
-  $products = [];
-  $products[] = ext_node_product_get_info(2);
-  $products[] = ext_node_product_get_info(3);
-  $products[] = $products[0];
-  $products[] = $products[1];
-  $products[] = $products[0];
-  $products[] = $products[1];
-
-  foreach ($products as $product_info) {
-    $cards[] = theme('product_teaser', ['product_info' => $product_info]);
+  $dbr = db_select('node', 'n');
+  $dbr->condition('n.type', 'product');
+  $dbr->condition('n.status', '1');
+  $dbr->condition('n.promote', '1');
+  $dbr->addField('n', 'nid');
+  $dbr->orderRandom();
+  if ($nodes = $dbr->execute()->fetchCol()) {
+    foreach ($nodes as $nid) {
+      $cards[] = theme('product_teaser', ['product_info' => ext_node_product_get_info($nid)]);
+    }
   }
+
 
   return $cards;
 }

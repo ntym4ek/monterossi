@@ -185,7 +185,10 @@
 .view {
   &.view-catalog {
     .view-content { @include row(); }
-    .views-row { @include col('xs', 12); @include col('md', 6); @include col('xl', 3); }
+    .views-row {
+      @include col('xs', 12); @include col('md', 6); @include col('xl', 4);
+      margin-bottom: 1rem;
+    }
   }
 }
 

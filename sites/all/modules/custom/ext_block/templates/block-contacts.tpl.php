@@ -8,7 +8,7 @@
         <div class="text">
           <p><?php print 'ООО «КССС Лубрикантс»'; ?></p>
           <p><?php print 'Россия, 613048, Кировская область, <span class="nowrap">г. Кирово-Чепецк</span>, <span class="nowrap">улица Производственная, дом 4/2</span>'; ?></p>
-          <div><a class="phone c0py" href="tel:88005502426">8 (800) 550-24-26</a>, <a class="phone c0py" href="tel:88332761521">8 (8332) 76-15-21</a></div>
+          <div><a class="phone c0py" href="tel:88332761521">8 (8332) 76-15-21</a></div>
           <div><a class="email c0py" href="mailto:info@monterossi.ru">info@monterossi.ru</a></div>
         </div>
       </div>

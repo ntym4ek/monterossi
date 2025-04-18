@@ -6,7 +6,7 @@
     <div class="container">
       <div class="content">
         <p>В настоящее время мы активно формируем дистрибьюторскую сеть на&nbsp;территории России.</p>
-        <p>Мы перспективны!<br>Приглашаем присоединиться!</p>
+        <p>Мы предлагаем:</p>
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
   <div class="row-2">
     <div class="row">
       <div class="col-xs-12 col-md-6">
-        <h2><?php print 'Качественная высокопремиальная продукция'; ?></h2>
+        <h2>Качественная высокопремиальная продукция</h2>
         <div class="content">
           <p>Современное производство по европейским стандартам, ежегодно успешно проходит аудиты мультинациональных компаний.</p>
           <p>Высококачественные базовые масла и&nbsp;топовые проверенные пакеты присадок от&nbsp;мировых лидеров позволили создать линейки масел с&nbsp;запасом эксплуатационных свойств</p>
@@ -29,7 +29,7 @@
       </div>
       <div class="col-xs-12 col-md-6">
         <div class="image">
-          <img src="/sites/default/files/images/blocks/can.jpg" alt="Производственная линия MONTEROSSI">
+          <img src="/sites/default/files/images/blocks/dist-can.jpg" alt="Производственная линия MONTEROSSI">
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@
   <div class="screen-width row-3">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12"><h2><?php print 'ПАРТНЕРСКОЕ СОТРУДНИЧЕСТВО'; ?></h2></div>
+        <div class="col-xs-12"><h2>ПАРТНЕРСКОЕ СОТРУДНИЧЕСТВО</h2></div>
         <div class="col-xs-12 col-md-6">
           <div class="content">
             <ul>
@@ -66,7 +66,7 @@
 
   <div class="row-4">
     <div class="row">
-      <div class="col-xs-12"><h2><?php print 'Развитие'; ?></h2></div>
+      <div class="col-xs-12"><h2>Развитие</h2></div>
       <div class="col-xs-12 col-md-4">
         <div class="content">
           <img src="/sites/default/files/images/blocks/dist-3.png" alt="Расширение MONTEROSSI">
