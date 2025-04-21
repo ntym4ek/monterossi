@@ -201,16 +201,16 @@
           </div>
           <div class="col-xs-8 col-md-4">
             <ul class="menu company">
-              <li><?php print l(t('About us'), ''); ?></li>
+              <li><?php print l(t('About us'), 'node/13'); ?></li>
               <li><?php print l(t('For distributors'), 'node/5'); ?></li>
-              <li><?php print l(t('Technical advice'), ''); ?></li>
+              <li><?php print l(t('Technical advice'), 'node/11'); ?></li>
               <li><a href="https://kccc.group" target="_blank">KCCC GROUP</a></li>
             </ul>
           </div>
 
           <div class="col-xs-6 col-md-4">
             <ul class="menu directions">
-              <li><?php print l(t('Motor oils for passenger cars'), '', ['html' => true]); ?></li>
+              <li><?php print l(t('Motor oils for passenger cars'), '/katalog', ['html' => true, 'query' => ['f[]' => 'field_p_category:4']]); ?></li>
               <li><?php print l(t('Motor oils for trucks'), '', ['html' => true]); ?></li>
               <li><?php print l(t('Transmission oils'), '', ['html' => true]); ?></li>
               <li><?php print l(t('Car cosmetics'), '', ['html' => true]); ?></li>

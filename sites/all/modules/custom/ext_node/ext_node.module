@@ -71,8 +71,8 @@ function ext_node_preprocess_node(&$vars)
     // -- Полный вид просмотра ---------------------------------------------------
     if ($vars['view_mode'] == 'full') {
       if ($node->type == 'product') {
-        $vars['product_call_btn'] = l('Заказать звонок', 'node/1',
-          ['attributes' => ['class' => ['btn', 'btn-danger', 'btn-lg']]]
+        $vars['product_call_btn'] = l('Заказать звонок', 'node/12',
+          ['attributes' => ['class' => ['btn', 'btn-danger', 'btn-lg', 'autodialog'], 'data-dialog-width' => '650']]
         );
         $vars['product_where_btn'] = l('Где купить', 'node/4',
           ['attributes' => ['class' => ['btn', 'btn-default', 'btn-lg', 'btn-wide']]]

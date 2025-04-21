@@ -109,35 +109,54 @@
 .product-teaser {
   padding: 0 2rem;
   .p-label {
-    color: $text-color; font-size: $font-size-h3; font-weight: 800; text-align: center;
+    color: $text-color; font-size: $font-size-h2; font-weight: 800; text-align: center;
     margin: 1rem 0;
   }
   .p-image {
     margin-bottom: 1rem;
     position: relative;
-    .image { width: 55%; } // край предмета по середине с учётом правой отбивки
+    height: 250px;
+    .image {
+      height: 100%;
+      max-width: 65%; // край предмета по середине с учётом правой отбивки
+      img {
+        display: block;
+        object-fit: contain;
+        width: 100%; height: 100%;
+      }
+    }
   }
   .p-stickers {
     position: absolute; right: 0; top: 0; z-index: 1;
+    width: 24%;
   }
   .p-sticker {
-    &:not(:first-child) { margin-top: 1rem; }
-    max-width: 65px;
+    margin-top: .5rem;
+    //max-width: 78px;
   }
   .p-description {
-    color: $text-muted; font-size: $font-size-small; text-align: center;
+    color: $text-muted; font-size: $font-size-large; text-align: center;
     margin-bottom: 1rem;
   }
   .p-tares {
-    color: $text-color; font-size: $font-size-small; text-align: center;
+    color: $text-color; text-align: center;
     display: flex; justify-content: center;
   }
   .p-tare {
-    margin: 0 3px; padding: .3rem .5rem;
-    &.selected {
-      background-color: $gray-lightest;
-      border-radius: 5px;
-    }
+    border: 1px solid $gray-light; border-radius: 10px;
+    margin: 0 3px; padding: .2rem .5rem;
+  }
+
+  @media #{$pad} {
+    .p-label { font-size: $font-size-h3; }
+    .p-description { font-size: $font-size-base; }
+  }
+  @media #{$laptop} {
+    .p-label { font-size: $font-size-h4; }
+    .p-image { height: 260px; }
+    .p-description { font-size: $font-size-small; }
+    .p-tares { font-size: $font-size-small; }
+    .p-stickers { width: 27%; }
   }
 }
 
@@ -196,7 +215,34 @@
     .view-content { @include row(); }
     .views-row {
       @include col('xs', 12); @include col('md', 6); @include col('xl', 4);
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .pager {
+    margin: 2rem 0;
+    li.pager-ellipsis,
+    li.pager-current {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 40px; width: 40px;
+      margin: 0; padding: 0;
+    }
+    li.pager-previous,
+    li.pager-first,
+    li.pager-next,
+    li.pager-last,
+    li.pager-item {
+      margin: 0; padding: 0;
+      a {
+        border-radius: 5px;
+        display: inline-flex; align-items: center; justify-content: center;
+        color: $text-color;
+        height: 40px; width: 40px;
+        transition: all 200ms;
+        &:hover {
+          box-shadow: 1px 3px 17px rgba(0, 0, 0, 0.2);
+          transform: translateY(-2px);
+        }
+      }
     }
   }
 }
