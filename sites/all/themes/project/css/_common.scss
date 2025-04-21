@@ -50,6 +50,15 @@
       font-size: 1.1rem;
     }
   }
+  .contact a {
+    color: $menu-item-color; font-size: $font-size-base;
+    &:hover { color: $menu-item-hover-color; }
+  }
+  .secondary-menu.menu > li {
+    > a { padding-top: 0; padding-bottom: 0; }
+    &:not(:last-child) > a { border-right: 2px solid #606060; }
+  }
+
 
   .nav-mobile-label { display: flex; justify-content: right; }
   .main-menu.level-1 > li.first a {

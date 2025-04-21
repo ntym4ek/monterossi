@@ -2426,6 +2426,16 @@ ul.menu {
     @media only screen and (min-width: 768px) {
       .page-header .language-switch, .page-header .cart-link {
         font-size: 1.1rem; } }
+  .page-header .contact a {
+    color: #606060;
+    font-size: 1rem; }
+    .page-header .contact a:hover {
+      color: #7D7C7C; }
+  .page-header .secondary-menu.menu > li > a {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .page-header .secondary-menu.menu > li:not(:last-child) > a {
+    border-right: 2px solid #606060; }
   .page-header .nav-mobile-label {
     display: flex;
     justify-content: right; }

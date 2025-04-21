@@ -58,6 +58,13 @@
               </div>
               <?php endif; ?>
 
+              <div class="col hide-xs show-lg">
+                <div class="contact">
+                  <a href="tel:88005502426">8 (800) 550-24-26</a>
+                </div>
+              </div>
+
+
               <div class="col show-xs hide-lg">
                 <div class="nav-mobile-label"><div class="label"><div class="icon"></div></div></div>
               </div>
