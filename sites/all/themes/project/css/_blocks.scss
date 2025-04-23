@@ -158,6 +158,11 @@
     border-radius: 32px;
     overflow: hidden;
   }
+  .contacts {
+    margin-top: 2rem;
+    > div { margin: .5rem 0; }
+    a { color: $text-color; font-weight: 700; }
+  }
   .btn { margin-top: 1rem; }
 
   @media #{$pad} {
@@ -260,6 +265,12 @@
       a { color: inherit; }
       .form-item { margin-bottom: 0; } // для списков c AJAX
     }
+  }
+
+  .form-type-checkbox {
+    display: flex; align-items: flex-start;
+    input { margin-right: .5rem; }
+    label { margin-bottom: 2px; }
   }
 }
 

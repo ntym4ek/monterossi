@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 .row {
   margin: 0 -1rem;
@@ -2878,6 +2879,13 @@ ul.menu {
 .block-consulting .image {
   border-radius: 32px;
   overflow: hidden; }
+.block-consulting .contacts {
+  margin-top: 2rem; }
+  .block-consulting .contacts > div {
+    margin: .5rem 0; }
+  .block-consulting .contacts a {
+    color: #333;
+    font-weight: 700; }
 .block-consulting .btn {
   margin-top: 1rem; }
 @media only screen and (min-width: 768px) {
@@ -3004,6 +3012,13 @@ ul.menu {
         color: inherit; }
       .block-facetapi ul li .form-item {
         margin-bottom: 0; }
+  .block-facetapi .form-type-checkbox {
+    display: flex;
+    align-items: flex-start; }
+    .block-facetapi .form-type-checkbox input {
+      margin-right: .5rem; }
+    .block-facetapi .form-type-checkbox label {
+      margin-bottom: 2px; }
 
 .block-current-search .item-list ul {
   display: flex;
@@ -3318,5 +3333,23 @@ ul.menu {
   .page-node-add fieldset .fieldset-description,
   .page-node-edit fieldset .fieldset-description {
     margin-bottom: 1rem; }
+
+#map {
+  width: 95%;
+  height: 250px; }
+
+/* Оформление меню (начало)*/
+.menu {
+  list-style: none;
+  padding: 5px;
+  margin: 0; }
+
+.submenu {
+  list-style: none;
+  margin: 0 0 0 20px;
+  padding: 0; }
+
+.submenu li {
+  font-size: 90%; }
 
 /*# sourceMappingURL=project.css.map */

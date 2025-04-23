@@ -59,6 +59,9 @@ function project_facetapi_title($vars)
   if (strpos($vars["facet"]["#settings"]->facet, 'field_p_specs') !== false) {
     return '<span>Соответствия</span><i class="icon icon-13"></i>';
   }
+  if (strpos($vars["facet"]["#settings"]->facet, 'field_p_line') !== false) {
+    return '<span>Направление</span><i class="icon icon-13"></i>';
+  }
 }
 
 function project_current_search_link_active($vars)
