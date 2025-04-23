@@ -92,7 +92,7 @@
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <?php foreach ($images as $image) {
-                    print '<div class="swiper-slide"><div class="image">' . drupal_render($image) . '</div></div>';
+                    print '<div class="swiper-slide"><div class="image"><img src="' . image_style_url('thumbnail', $image["#item"]["uri"]) . '" /></div></div>';
                   } ?>
                 </div>
               </div>
