@@ -79,6 +79,51 @@
   }
 }
 
+// - где купить --------------------------------------------------------------------------
+.sellers {
+  margin-bottom: 2rem;
+  .listMenu {
+    padding: 0 1rem;
+    > li > a { font-weight: 700; }
+    .submenu > li > a {
+      color: inherit;
+      &.selected { color: $brand-red; }
+    }
+
+  }
+  .typeMenu {
+    display: flex;
+    margin-bottom: 1rem;
+    li {
+      text-transform: uppercase;
+      margin-right: 1rem;
+    }
+    a:not(.selected) { opacity: .4; }
+  }
+  #map {
+    width: 100%; height: 500px;
+    .balloon {
+      font-family: $font-name; font-size: $font-size-small; font-style: normal;
+      padding: .1rem .5rem;
+      .address { margin: .5rem 0; }
+      .email { margin-top: .1rem; }
+      .web { margin-top: .3rem; }
+      .title { font-weight: 700; }
+    }
+  }
+  ul {
+    padding: 0; margin: 0;
+    li {
+      list-style: none;
+      padding: .5rem 0;
+    }
+  }
+
+  @media #{$tablet} {
+    margin-bottom: 3rem;
+  }
+}
+
 // - админка -----------------------------------------------------------------------------
 .page-admin-content {
   .exposed-filters > .form-wrapper {

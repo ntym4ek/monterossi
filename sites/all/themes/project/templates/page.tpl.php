@@ -213,7 +213,7 @@
               <li><?php print l(t('Motor oils for passenger cars'), '/katalog', ['html' => true, 'query' => ['f[0]' => 'field_p_category:4', 'f[1]' => 'field_p_line:32']]); ?></li>
               <li><?php print l(t('Motor oils for trucks'), '/katalog', ['html' => true, 'query' => ['f[0]' => 'field_p_category:4', 'f[1]' => 'field_p_line:33']]); ?></li>
               <li><?php print l(t('Transmission oils'),'/katalog', ['html' => true, 'query' => ['f[]' => 'field_p_category:6']]); ?></li>
-              <li><?php print l(t('Car cosmetics'), '', ['html' => true]); ?></li>
+              <li><?php print l(t('Car cosmetics'),'/katalog', ['html' => true, 'query' => ['f[]' => 'field_p_category:7']]); ?></li>
             </ul>
           </div>
 

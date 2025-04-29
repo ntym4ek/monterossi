@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function fnc_map_menu()
+{
+  $items['gde-kupit'] = array(
+    'title' => 'Где купить',
+    'page callback' => 'fnc_map_page',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function fnc_map_page()
+{
+  $output = '<div class="sellers">' .
+              '<div class="row">' .
+                '<div class="col-xs-12"><div id="type"></div></div>' .
+                '<div class="col-xs-12 col-md-3"><div id="list"></div></div>' .
+                '<div class="col-xs-12 col-md-9"><div id="map"></div></div>' .
+              '</div>' .
+            '</div>';
+
+  $sellers = fnc_map_sellers_get_list();
+
+  drupal_add_js(['sellers' => $sellers], ['type' => 'setting']);
+  drupal_add_js('https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=4d40321a-97f7-4bfb-8a85-817cd1a609fe', ['type' => 'external']);
+  drupal_add_js(drupal_get_path('module', 'fnc_map') . '/js/fnc_map.js');
+
+  return $output;
+}
+
+function fnc_map_sellers_get_list()
+{
+  $list = [
+    'types' => [], // список выбранных вариантов Типов
+    'regions' => [],
+  ];
+
+  if ($terms = taxonomy_get_tree(taxonomy_vocabulary_machine_name_load('sellers')->vid)) {
+    foreach ($terms as $term) {
+      $term_info = helper_term_get_info($term->tid);
+      $type = array_key_first($term_info['field_seller_type']);
+      $region = $term_info["field_region"]->tid;
+      if (!isset($list['types'][$type])) $list['types'][$type] = $term_info['field_seller_type'][$type];
+      if (empty($list['regions'][$region])) {
+        $list['regions'][$region] = ['id' => $region, 'label' => $term_info["field_region"]->name, 'items' =>[]];
+      }
+      $list['regions'][$region]['items'][] = [
+        'id' => $term_info["id"],
+        'label' => $term_info['label'],
+        'type' => ['id' => $type, 'label' => $term_info['field_seller_type'][$type]],
+        'region' => ['id' => $region, 'label' => $term_info["field_region"]->name],
+        'address' => $term_info['field_seller_address'],
+        'email' => $term_info['field_seller_email'],
+        'web' => $term_info['field_seller_web']? url('http://' . str_replace(['http://', 'https://'], '', $term_info['field_seller_web']), ['external' => true]) : '',
+        'phones' => implode(', ', $term_info['field_seller_phones']),
+        'coords' => $term_info['field_seller_coords'],
+      ];
+    }
+  }
+
+  return $list;
+}

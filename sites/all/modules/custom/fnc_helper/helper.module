@@ -112,9 +112,16 @@ function helper_term_get_info($tid)
     ];
 
     // todo по списку полей добавить значения в массив
+    $prop_info = $term_wr->getPropertyInfo();
     if ($fields = field_info_instances('taxonomy_term', $voc->machine_name)) {
       foreach ($fields as $name => $field) {
-        if (!in_array($name, ['name_field', 'description_field'])) {
+        // определить поле типа List и вывести не только его значение (хранимое в бд),
+        // но и метку
+        if ($prop_info[$name]['type'] == 'text' && !empty($prop_info[$name]["options list"])) {
+          $opt_list = $term_wr->{$name}->optionsList();
+          $term[$name] = [$term_wr->{$name}->value() => $opt_list[$term_wr->{$name}->value()]];
+        }
+        elseif (!in_array($name, ['name_field', 'description_field'])) {
           $term[$name] = $term_wr->{$name}->value();
         }
       }

@@ -3304,6 +3304,50 @@ ul.menu {
   .node-product.node-full .image-sticker {
     width: 100px; } }
 
+.sellers {
+  margin-bottom: 2rem; }
+  .sellers .listMenu {
+    padding: 0 1rem; }
+    .sellers .listMenu > li > a {
+      font-weight: 700; }
+    .sellers .listMenu .submenu > li > a {
+      color: inherit; }
+      .sellers .listMenu .submenu > li > a.selected {
+        color: #DA0009; }
+  .sellers .typeMenu {
+    display: flex;
+    margin-bottom: 1rem; }
+    .sellers .typeMenu li {
+      text-transform: uppercase;
+      margin-right: 1rem; }
+    .sellers .typeMenu a:not(.selected) {
+      opacity: .4; }
+  .sellers #map {
+    width: 100%;
+    height: 500px; }
+    .sellers #map .balloon {
+      font-family: "Montserrat";
+      font-size: 0.889rem;
+      font-style: normal;
+      padding: .1rem .5rem; }
+      .sellers #map .balloon .address {
+        margin: .5rem 0; }
+      .sellers #map .balloon .email {
+        margin-top: .1rem; }
+      .sellers #map .balloon .web {
+        margin-top: .3rem; }
+      .sellers #map .balloon .title {
+        font-weight: 700; }
+  .sellers ul {
+    padding: 0;
+    margin: 0; }
+    .sellers ul li {
+      list-style: none;
+      padding: .5rem 0; }
+  @media only screen and (min-width: 1024px) {
+    .sellers {
+      margin-bottom: 3rem; } }
+
 .page-admin-content .exposed-filters > .form-wrapper {
   display: flex; }
   .page-admin-content .exposed-filters > .form-wrapper > .form-actions {
