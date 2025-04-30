@@ -62,8 +62,8 @@
       </div>
     </div>
     <div class="col-xs-12 col-lg-8">
-      <div class="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78cea55127117861b07a1d607d31fb2fc252393b08a5f4160d2fbec3dea19750&amp;width=1024&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+      <div id="map" class="map">
+<!--        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78cea55127117861b07a1d607d31fb2fc252393b08a5f4160d2fbec3dea19750&amp;width=1024&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>-->
       </div>
     </div>
   </div>

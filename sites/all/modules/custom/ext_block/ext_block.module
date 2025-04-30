@@ -68,6 +68,11 @@ function ext_block_block_view($delta = '')
     $block['content'] = theme($delta);
   }
 
+  if ($delta == 'custom-block-contacts') {
+    drupal_add_js(['contacts' => ext_block_contacts_get()], ['type' => 'setting']);
+    drupal_add_js('https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=4d40321a-97f7-4bfb-8a85-817cd1a609fe', ['type' => 'external']);
+  }
+
   // общее для программных блоков
   if (strpos($delta, 'custom-block-') === 0) {
     $block['subject'] = null;
@@ -150,6 +155,39 @@ function ext_block_get_front_banner_slides()
   return $banners;
 }
 
+function ext_block_contacts_get()
+{
+  return [
+    [
+      'title' => 'Производство ООО «КССС Лубрикантс»',
+      'name' => 'Россия, 613048, Кировская область, г. Кирово-Чепецк, улица Производственная, дом 4/2',
+      'phone' => '8 (8332) 76-15-21',
+      'email' => 'info@monterossi.ru',
+      'coords' => [58.540377, 49.976420],
+    ],
+    [
+      'title' => 'Региональный менеджер (Восточная Сибирь)',
+      'name' => 'Панкина Елена Сергеевна',
+      'phone' => '+7 (914) 954-98-07',
+      'email' => 'elena.pankina@kccc.ru',
+      'coords' => [52.289588, 104.280606],
+    ],
+    [
+      'title' => 'Региональный менеджер (УФО)',
+      'name' => 'Гинзбургский Александр Юрьевич',
+      'phone' => '+7 (912) 262-37-73',
+      'email' => 'aleksandr.ginzburgskiy@kccc.ru',
+      'coords' => [56.838011, 60.597474],
+    ],
+    [
+      'title' => 'Региональный менеджер (Западная Сибирь)',
+      'name' => 'Казаков Павел Владимирович',
+      'phone' => '+7 (913) 376-05-49',
+      'email' => 'pavel.kazakov@kccc.ru',
+      'coords' => [55.030204, 82.920430],
+    ],
+  ];
+}
 function ext_block_products_get_popular()
 {
   $cards = [];

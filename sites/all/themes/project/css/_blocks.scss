@@ -313,7 +313,7 @@
   padding: 2rem 0;
   a { color: inherit; }
   .map {
-    height: 100%; min-height: 320px;
+    height: 100%; min-height: 350px;
   }
   .contact {
     border-bottom: 1px solid $gray-light;
@@ -326,6 +326,9 @@
 
   @media #{$tablet} {
     .text { padding-top: 0; }
+    .map {
+      min-height: 600px;
+    }
   }
 }
 

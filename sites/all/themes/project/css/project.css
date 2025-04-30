@@ -3064,7 +3064,7 @@ ul.menu {
     color: inherit; }
   .block-contacts-map .map {
     height: 100%;
-    min-height: 320px; }
+    min-height: 350px; }
   .block-contacts-map .contact {
     border-bottom: 1px solid #ccc;
     margin-bottom: 1rem;
@@ -3075,7 +3075,9 @@ ul.menu {
     padding-bottom: 1rem; }
   @media only screen and (min-width: 1024px) {
     .block-contacts-map .text {
-      padding-top: 0; } }
+      padding-top: 0; }
+    .block-contacts-map .map {
+      min-height: 600px; } }
 
 .block-dist .container {
   height: 100%; }
@@ -3411,6 +3413,25 @@ ul.menu {
   .node-product.node-full .image-sticker {
     width: 100px; } }
 
+#map {
+  width: 100%;
+  height: 500px; }
+  #map .balloon {
+    font-family: "Montserrat";
+    font-size: 0.889rem;
+    font-style: normal;
+    padding: .1rem .5rem; }
+    #map .balloon .address {
+      margin: .5rem 0; }
+    #map .balloon .email {
+      margin-top: .1rem; }
+      #map .balloon .email a {
+        color: inherit; }
+    #map .balloon .web {
+      margin-top: .3rem; }
+    #map .balloon .title {
+      font-weight: 700; }
+
 .sellers {
   margin-bottom: 2rem; }
   .sellers .listMenu {
@@ -3429,24 +3450,6 @@ ul.menu {
       margin-right: 1rem; }
     .sellers .typeMenu a:not(.selected) {
       opacity: .4; }
-  .sellers #map {
-    width: 100%;
-    height: 500px; }
-    .sellers #map .balloon {
-      font-family: "Montserrat";
-      font-size: 0.889rem;
-      font-style: normal;
-      padding: .1rem .5rem; }
-      .sellers #map .balloon .address {
-        margin: .5rem 0; }
-      .sellers #map .balloon .email {
-        margin-top: .1rem; }
-        .sellers #map .balloon .email a {
-          color: inherit; }
-      .sellers #map .balloon .web {
-        margin-top: .3rem; }
-      .sellers #map .balloon .title {
-        font-weight: 700; }
   .sellers ul {
     padding: 0;
     margin: 0; }

@@ -114,7 +114,7 @@
               iconImageSize: [43, 55],
               iconImageOffset: [-21, -52],
               balloonPanelMaxMapArea: 'Infinity',
-            });
+          });
 
         // задаём свои параметры для дальнейшей фильтрации
         placemark.properties.set('type', item.type.id);
