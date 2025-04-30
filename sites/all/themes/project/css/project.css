@@ -2446,7 +2446,8 @@ ul.menu {
     .page-header .branding img {
       height: 76px; }
     .page-header .global {
-      display: block; }
+      display: block; } }
+  @media only screen and (min-width: 1024px) {
     .page-header .r2 {
       height: 68px; } }
 
@@ -2532,7 +2533,8 @@ ul.menu {
       font-size: 1rem; } }
   @media only screen and (min-width: 1366px) {
     .product-teaser .p-label {
-      font-size: 1.111rem; }
+      font-size: 1.111rem;
+      min-height: 50px; }
     .product-teaser .p-image {
       height: 260px; }
     .product-teaser .p-description {
@@ -2709,9 +2711,33 @@ ul.menu {
     .form-item-fz152-agreement a:hover {
       color: #E9E9E9; }
 
+.block .accordion {
+  height: 100%;
+  padding-top: 1rem; }
+  .block .accordion .a-item {
+    border-bottom: 1px solid #ccc; }
+  .block .accordion .a-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1rem 1rem 1rem; }
+    .block .accordion .a-title i {
+      transform: rotate(90deg);
+      transition: all 200ms; }
+    .block .accordion .a-title.active i {
+      transform: rotate(270deg); }
+  .block .accordion .a-text {
+    padding: 0 1rem 1rem 1rem; }
 @media only screen and (min-width: 1366px) {
   .block {
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem; }
+    .block .accordion {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; } }
 
 .block-front-banner {
   --swiper-pagination-bullet-width: 10px;
@@ -3064,7 +3090,6 @@ ul.menu {
     color: #fff;
     font-size: 1.333rem;
     font-weight: 700;
-    line-height: 1.5;
     text-shadow: 1px 1px 5px #333;
     display: flex;
     flex-wrap: wrap;
@@ -3117,8 +3142,114 @@ ul.menu {
   .block-dist .row-3 {
     height: 668px; }
   .block-dist .row-1 .content {
-    font-size: 2rem;
-    max-width: 75%; } }
+    font-size: 45px;
+    max-width: 65%; } }
+
+.block-contract h2 {
+  text-transform: uppercase;
+  margin-top: 0; }
+.block-contract .container {
+  height: 100%; }
+.block-contract .screen-width {
+  padding: 2rem 0; }
+.block-contract .row-1, .block-contract .row-2, .block-contract .row-4 {
+  margin-bottom: 2rem; }
+.block-contract .row-1 {
+  background-image: url(../../../../default/files/images/blocks/contract-banner.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 300px; }
+  .block-contract .row-1 .content {
+    color: #fff;
+    font-size: 1.333rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px #333;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%; }
+    .block-contract .row-1 .content p {
+      flex: 100%; }
+.block-contract .row-2 .accordion {
+  padding-bottom: 2rem; }
+.block-contract .row-3 {
+  background: #E9E9E9; }
+  .block-contract .row-3 .box {
+    border-left: 2px solid #7D7C7C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    min-height: 100px; }
+  .block-contract .row-3 .digit {
+    font-size: 3rem; }
+  .block-contract .row-3 .text {
+    font-size: 1.222rem;
+    text-transform: uppercase; }
+.block-contract .row-4 {
+  background-image: url(../../../../default/files/images/blocks/contract-2.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  font-size: 1.222rem;
+  font-weight: 700;
+  height: 600px; }
+  .block-contract .row-4 .content {
+    margin-bottom: 3rem; }
+  .block-contract .row-4 .box {
+    border-left: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    min-height: 65px; }
+.block-contract .row-5 .list {
+  padding-bottom: 2rem; }
+.block-contract .row-5 .item {
+  border-bottom: 1px solid #ccc; }
+.block-contract .row-5 .title {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 1rem 1rem; }
+@media only screen and (min-width: 768px) {
+  .block-contract .row-1 .content {
+    max-width: 48%; }
+  .block-contract .row-3 .box {
+    min-height: 150px; }
+  .block-contract .row-4 {
+    height: 500px; }
+    .block-contract .row-4 .box {
+      min-height: 110px; } }
+@media only screen and (min-width: 1024px) {
+  .block-contract .row-1, .block-contract .row-2, .block-contract .row-4 {
+    margin-bottom: 3rem; }
+  .block-contract .screen-width {
+    padding: 3rem 0; }
+  .block-contract .row-1 {
+    height: 668px; }
+    .block-contract .row-1 .content {
+      font-size: 45px;
+      font-weight: 800;
+      max-width: 45%; }
+  .block-contract .row-2 .accordion {
+    padding-bottom: 0; }
+  .block-contract .row-3 .content {
+    min-height: 300px; }
+  .block-contract .row-3 .box {
+    margin: 3rem 0 2rem;
+    min-height: 200px; }
+  .block-contract .row-4 {
+    height: 668px; }
+    .block-contract .row-4 .content {
+      max-width: 55%; }
+    .block-contract .row-4 .box {
+      margin: 5rem 0 3rem;
+      min-height: 250px; }
+  .block-contract .row-5 .list {
+    padding: 2rem 0 0; } }
 
 .block-about .container {
   height: 100%; }
@@ -3147,7 +3278,6 @@ ul.menu {
     color: #fff;
     font-size: 1.333rem;
     font-weight: 700;
-    line-height: 1.5;
     text-shadow: 1px 1px 5px #333;
     display: flex;
     flex-wrap: wrap;
@@ -3157,33 +3287,14 @@ ul.menu {
       flex: 100%; }
 .block-about .row-2 h2 {
   text-align: center; }
-.block-about .accordion {
-  height: 100%;
-  padding-top: 1rem; }
-  .block-about .accordion .a-item {
-    border-bottom: 1px solid #ccc; }
-  .block-about .accordion .a-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 1rem 1rem 1rem; }
-    .block-about .accordion .a-title i {
-      transform: rotate(90deg);
-      transition: all 200ms; }
-    .block-about .accordion .a-title.active i {
-      transform: rotate(270deg); }
-  .block-about .accordion .a-text {
-    padding: 0 1rem 1rem 1rem; }
 @media only screen and (min-width: 1024px) {
   .block-about .row-2, .block-about .row-3, .block-about .row-4 {
     margin-bottom: 3rem; }
   .block-about .row-1 {
     height: 668px; }
     .block-about .row-1 .content {
-      font-size: 2rem;
-      max-width: 65%; }
+      font-size: 45px;
+      max-width: 75%; }
   .block-about .row-2 .row {
     height: 700px; }
   .block-about .row-2 .col-xs-12 {
@@ -3191,11 +3302,7 @@ ul.menu {
   .block-about .row-2 .content {
     height: 100%; }
   .block-about .text {
-    padding-bottom: 0; }
-  .block-about .accordion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; } }
+    padding-bottom: 0; } }
 
 .block-support .contacts {
   margin: 2rem 0; }
@@ -3334,6 +3441,8 @@ ul.menu {
         margin: .5rem 0; }
       .sellers #map .balloon .email {
         margin-top: .1rem; }
+        .sellers #map .balloon .email a {
+          color: inherit; }
       .sellers #map .balloon .web {
         margin-top: .3rem; }
       .sellers #map .balloon .title {
@@ -3346,7 +3455,9 @@ ul.menu {
       padding: .5rem 0; }
   @media only screen and (min-width: 1024px) {
     .sellers {
-      margin-bottom: 3rem; } }
+      margin-bottom: 3rem; }
+      .sellers #map {
+        height: 600px; } }
 
 .page-admin-content .exposed-filters > .form-wrapper {
   display: flex; }

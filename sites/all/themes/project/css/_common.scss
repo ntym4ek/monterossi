@@ -68,6 +68,8 @@
   @media #{$pad} {
     .branding img { height: 76px; }
     .global { display: block; }
+  }
+  @media #{$tablet} {
     .r2 { height: 68px; }
   }
 }
@@ -152,7 +154,10 @@
     .p-description { font-size: $font-size-base; }
   }
   @media #{$laptop} {
-    .p-label { font-size: $font-size-h4; }
+    .p-label {
+      font-size: $font-size-h4;
+      min-height: 50px;
+    }
     .p-image { height: 260px; }
     .p-description { font-size: $font-size-small; }
     .p-tares { font-size: $font-size-small; }

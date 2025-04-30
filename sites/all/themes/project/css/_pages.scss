@@ -106,7 +106,10 @@
       font-family: $font-name; font-size: $font-size-small; font-style: normal;
       padding: .1rem .5rem;
       .address { margin: .5rem 0; }
-      .email { margin-top: .1rem; }
+      .email {
+        margin-top: .1rem;
+        a { color: inherit; }
+      }
       .web { margin-top: .3rem; }
       .title { font-weight: 700; }
     }
@@ -121,6 +124,9 @@
 
   @media #{$tablet} {
     margin-bottom: 3rem;
+    #map {
+      height: 600px;
+    }
   }
 }
 

@@ -39,6 +39,9 @@ function ext_block_block_info()
     'custom-block-about' => [
       'info' => t('CB | О компании'),
     ],
+    'custom-block-contract' => [
+      'info' => t('CB | Контрактное производство'),
+    ],
   ];
 }
 
@@ -123,6 +126,10 @@ function ext_block_theme()
     'custom-block-about'    => [
       'variables' => [],
       'template' => 'templates/block-about',
+    ],
+    'custom-block-contract'    => [
+      'variables' => [],
+      'template' => 'templates/block-contract',
     ],
   ];
 }

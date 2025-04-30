@@ -93,7 +93,7 @@ function project_current_search_deactivate_widget($vars)
  */
 function project_preprocess_page(&$vars)
 {
-  if (isset($vars['node']) && in_array($vars['node']->nid, [5,13])) {
+  if (isset($vars['node']) && in_array($vars['node']->nid, [5, 13, 39])) {
     $vars['is_title_on'] = false;
   }
 }

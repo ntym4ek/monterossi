@@ -204,6 +204,7 @@
               <li><?php print l(t('About us'), 'node/13'); ?></li>
               <li><?php print l(t('For distributors'), 'node/5'); ?></li>
               <li><?php print l(t('Technical advice'), 'node/11'); ?></li>
+              <li><?php print l(t('Contract production'), 'node/39'); ?></li>
               <li><a href="https://kccc.group" target="_blank">KCCC GROUP</a></li>
             </ul>
           </div>
