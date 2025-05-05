@@ -12,7 +12,7 @@
 
   <div class="row-2">
     <div class="row">
-      <div class="col-xs-12 col-lg-6">
+      <div class="col-xs-12 col-lg-7 col-xl-6">
         <div class="content">
           <div class="text">
             <h2>Контрактное производство</h2>
@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-lg-6">
+      <div class="col-xs-12 col-lg-5 col-xl-6">
         <div class="image">
           <img src="/sites/default/files/images/blocks/contract-1.png" alt="Преимущества контрактного производства MONTEROSSI">
         </div>
@@ -56,25 +56,25 @@
     <div class="container">
       <h2>МЫ ПРОИЗВОДИМ</h2>
       <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="digit">1</div>
             <div class="text">Моторные масла для&nbsp;легковых автомобилей</div>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="digit">2</div>
             <div class="text">Моторные масла для&nbsp;грузовых автомобилей</div>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="digit">3</div>
             <div class="text">Трансмиссионные смазочные материалы</div>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="digit">4</div>
             <div class="text">Индустриальные смазочные материалы</div>
@@ -91,22 +91,22 @@
         <p>Доверьте производство профессионалам&nbsp;— снижайте затраты, экономьте время и&nbsp;расширяйте ассортимент без&nbsp;лишних рисков!</p>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="text">Собственные НИОКР и&nbsp;современные производственные мощности</div>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="text">Строгий контроль качества на&nbsp;всех этапах</div>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="text">Конкурентные цены и&nbsp;прозрачные условия сотрудничества</div>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-xl-3">
           <div class="box">
             <div class="text">Собственные <span class="nowrap">ж/д</span>&nbsp;терминалы</div>
           </div>

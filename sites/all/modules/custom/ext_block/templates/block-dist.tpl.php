@@ -13,7 +13,7 @@
 
   <div class="row-2">
     <div class="row">
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-lg-7 col-xl-6">
         <h2>Качественная высокопремиальная продукция</h2>
         <div class="content">
           <p>Современное производство по европейским стандартам, ежегодно успешно проходит аудиты мультинациональных компаний.</p>
@@ -27,7 +27,7 @@
           <p>Контроль партии от производства до&nbsp;потребителя (QR-кодирование)</p>
         </div>
       </div>
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-lg-5 col-xl-6">
         <div class="image">
           <img src="/sites/default/files/images/blocks/dist-can.jpg" alt="Производственная линия MONTEROSSI">
         </div>

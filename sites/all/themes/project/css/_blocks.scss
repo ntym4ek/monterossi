@@ -2,6 +2,7 @@
 
 // секция оформления блоков
 .block {
+  margin-bottom: 2rem;
   .accordion {
     height: 100%;
     padding-top: 1rem;
@@ -20,9 +21,12 @@
     .a-text { padding: 0 1rem 1rem 1rem; }
   }
 
+  @media #{$tablet} {
+    margin-bottom: 3rem;
+    .accordion { display: flex; flex-direction: column; justify-content: space-evenly; }
+  }
   @media #{$laptop} {
     margin-bottom: 4rem;
-    .accordion { display: flex; flex-direction: column; justify-content: space-evenly; }
   }
 }
 
@@ -63,7 +67,7 @@
     }
   }
 
-  @media #{$tablet} {
+  @media #{$laptop} {
     .content {
       padding-top: 4rem;
       .h1 {
@@ -73,11 +77,12 @@
         font-size: 44px;
         margin: 2rem 0;
       }
-      .btn { margin-top: 2rem; }
-
+      .btn {
+        @include button-size($padding-large-vertical, $padding-large-horizontal, $input-font-size-large, $line-height-large, $btn-border-radius-large, $input-height-large);
+        margin-top: 2rem;
+      }
     }
-  }
-  @media #{$laptop} {
+
     .swiper-slide { height: 668px; }
   }
 }
@@ -103,7 +108,7 @@
     .counters { padding: 2rem 1rem; }
     .counter {
       margin-bottom: 0;
-      span { font-size: 3rem; }
+      span { font-size: 2.5rem; }
       p { margin: 1rem auto; }
     }
   }
@@ -126,6 +131,16 @@
     overflow: hidden;
   }
   .btn { margin: 1rem 0; }
+
+  @media #{$pad} {
+    .image {
+      height: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 .block-quality {
@@ -137,29 +152,40 @@
   .image {
     border-radius: 32px;
     overflow: hidden;
+    height: 100%;
   }
   .content {
     display: flex; flex-direction: column; justify-content: space-between;
     height: 100%;
   }
-  .accordion {
-    padding-top: 1rem;
-    .a-item {
-      border-top: 1px solid $gray-light;
-      &:last-child { border-bottom: 1px solid $gray-light; }
-    }
-    .a-title {
-      display: flex; justify-content: space-between; align-items: center;
-      font-weight: 700;
-      cursor: pointer;
-      padding: 1rem 1rem 1rem;
-      i {
-        transform: rotate(90deg);
-        transition: all 200ms;
+  //.accordion {
+  //  padding: 1rem 0;
+  //  .a-title {
+  //    display: flex; justify-content: space-between; align-items: center;
+  //    font-weight: 700;
+  //    cursor: pointer;
+  //    padding: 1rem 1rem 1rem;
+  //    i {
+  //      transform: rotate(90deg);
+  //      transition: all 200ms;
+  //    }
+  //    &.active i { transform: rotate(270deg); }
+  //  }
+  //  .a-text { padding: 0 1rem 1rem 1rem; }
+  //}
+
+  @media #{$pad} {
+    .image {
+      height: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
       }
-      &.active i { transform: rotate(270deg); }
     }
-    .a-text { padding: 0 1rem 1rem 1rem; }
+  }
+  @media #{$laptop} {
+    .accordion { padding-bottom: 0; }
+    .image img { object-fit: contain; }
   }
 }
 
@@ -173,7 +199,7 @@
     font-size: $font-size-h3; text-transform: uppercase;
     margin-top: 0;
   }
-  .text { padding: 3rem; }
+  .text { padding: 2rem; }
   .image {
     border-radius: 32px;
     overflow: hidden;
@@ -187,6 +213,16 @@
 
   @media #{$pad} {
     h2 { font-size: $font-size-h2; }
+    .image {
+      height: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  @media #{$laptop} {
+    .text { padding: 3rem; }
   }
 }
 
@@ -199,19 +235,31 @@
     display: flex; flex-wrap: wrap; justify-content: center;
     margin-bottom: 2rem;
   }
-  .col-xs-12:not(:last-child) { border-right: 1px solid $gray-light; }
+
   .image {
     display: flex; justify-content: center;
-    height: 290px; width: 100%;
+    height: 120px; width: 100%;
     img { height: 100%; }
   }
   .title {
-    font-size: $font-size-large; font-weight: 700; text-align: center;
+    font-size: $font-size-base; font-weight: 500;
+    text-align: center;
   }
   a { color: inherit; }
 
   @media #{$pad} {
+    .image { height: 180px; }
+  }
+  @media #{$tablet} {
     .category { margin-bottom: 0; }
+    .col-xs-6:not(:last-child) { border-right: 1px solid $gray-light; }
+    .image { height: 200px; }
+    .title { font-weight: 700; }
+  }
+  @media #{$laptop} {
+    .image { height: 290px; }
+    .title { font-size: $font-size-large; }
+
   }
 }
 
@@ -313,7 +361,7 @@
   padding: 2rem 0;
   a { color: inherit; }
   .map {
-    height: 100%; min-height: 350px;
+    height: 100%; min-height: 450px;
   }
   .contact {
     border-bottom: 1px solid $gray-light;
@@ -324,11 +372,11 @@
     padding-bottom: 1rem;
   }
 
+  @media #{$pad} {
+    .map { min-height: 600px; }
+  }
   @media #{$tablet} {
     .text { padding-top: 0; }
-    .map {
-      min-height: 600px;
-    }
   }
 }
 
@@ -338,7 +386,6 @@
   .row-1 {
     background-image: url(../../../../default/files/images/blocks/dist-banner.jpg); background-size: cover; background-position: center center;
     height: 300px;
-
     .content {
       color: #fff; font-size: $font-size-h3; font-weight: 700; text-shadow: 1px 1px 5px #333;
       display: flex; flex-wrap: wrap; align-content: center;
@@ -349,17 +396,22 @@
   .row-2 {
     h2 {
       text-transform: uppercase;
-      margin: 0 0 3rem;
+      margin-top: 0;
     }
     ul { margin: 0; }
+    .content { padding-bottom: 1rem; }
+    .image {
+      border-radius: 25px;
+      overflow: hidden;
+    }
   }
   .row-3 {
     background-image: url(../../../../default/files/images/blocks/dist-2.jpg); background-size: cover; background-position: center center;
     color: #fff;
-    height: 300px;
+    padding: 1rem 0;
     h2 {
       text-align: center; text-transform: uppercase;
-      margin: 3rem 0;
+      margin: 1rem 0 2rem;
     }
     .content {
       color: #fff; font-size: $font-size-h4; font-weight: 700;
@@ -383,19 +435,43 @@
     .content {
       display: flex; flex-wrap: wrap; justify-content: center;
       text-align: center;
-      padding: 0 1rem;
+      margin-bottom: 2rem; padding: 0 3rem;
+    }
+  }
+
+  @media #{$pad} {
+    .row-2 .image {
+      height: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
   @media #{$tablet} {
     .row-1, .row-2, .row-3 { margin-bottom: 3rem; }
+    .row-1 {
+      height: 500px;
+      .content { font-size: $font-size-h1; }
+    }
+    .row-2 .content { padding-bottom: 0; }
+    .row-3 {
+      padding: 2rem 0;
+      h2 { margin: 1rem 0 3rem; }
+    }
+    .row-4 .content {
+      margin-bottom: 0; padding: 0 1rem;
+    }
+  }
 
-    .row-1,
-    .row-3 { height: 668px; }
-
-    .row-1 .content {
-      font-size: 45px;
-      max-width: 65%;
+  @media #{$laptop} {
+    .row-1 {
+      height: 668px;
+      .content {
+        font-size: 45px;
+        max-width: 65%;
+      }
     }
   }
 }
@@ -420,6 +496,10 @@
   }
   .row-2 {
     .accordion { padding-bottom: 2rem; }
+    .image {
+      border-radius: 25px;
+      overflow: hidden;
+    }
   }
   .row-3 {
     background: $gray-lightest;
@@ -438,7 +518,6 @@
   .row-4 {
     background-image: url(../../../../default/files/images/blocks/contract-2.jpg); background-size: cover; background-position: center center;
     color: #fff; font-size: $font-size-large; font-weight: 700;
-    height: 600px;
     .content { margin-bottom: 3rem; }
     .box {
       border-left: 2px solid #fff;
@@ -449,6 +528,10 @@
     }
   }
   .row-5 {
+    .image {
+      border-radius: 25px;
+      overflow: hidden;
+    }
     .list { padding-bottom: 2rem; }
     .item { border-bottom: 1px solid $gray-light; }
     .title {
@@ -457,21 +540,19 @@
     }
   }
 
-
   @media #{$pad} {
-    .row-1 .content {
-      max-width: 48%;
-    }
-    .row-3 {
-      .box {
-        min-height: 150px;
+    .row-2, .row-5 {
+      .image {
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
+    .row-3 .box { min-height: 150px; }
     .row-4 {
-      height: 500px;
-      .box {
-        min-height: 110px;
-      }
+      .box { min-height: 110px; }
     }
   }
   @media #{$tablet} {
@@ -479,14 +560,24 @@
     .screen-width { padding: 3rem 0; }
 
     .row-1 {
-      height: 668px;
+      height: 500px;
       .content {
-        font-size: 45px; font-weight: 800;
-        max-width: 45%;
+        font-size: $font-size-h1; font-weight: 800;
       }
     }
-    .row-2 {
-      .accordion { padding-bottom: 0; }
+    .row-2 .accordion { padding-bottom: 0; }
+    .row-4 .box { min-height: 100px; }
+    .row-5 {
+      .list { padding: 2rem 0 0; }
+    }
+  }
+
+  @media #{$laptop} {
+    .row-1 {
+      .content {
+        font-size: 45px;
+        max-width: 45%;
+      }
     }
     .row-3 {
       .content { min-height: 300px; }
@@ -503,9 +594,6 @@
         min-height: 250px;
       }
     }
-    .row-5 {
-      .list { padding: 2rem 0 0; }
-    }
   }
 }
 
@@ -514,14 +602,11 @@
   .container { height: 100%; }
   h2 { text-transform: uppercase; }
   .text { padding: 0 2rem 2rem; }
-  .image {
-    height: 100%;
-    img { height: 100%; }
-  }
 
   .row-3, .row-4, .row-5 {
     border-radius: 25px;
     h2 { margin-bottom: 2rem; }
+    .image { border-radius: 25px; overflow: hidden; }
   }
   .row-2, .row-3, .row-4 { margin-bottom: 2rem; }
   .row-2, .row-3, .row-5 { background-color: $gray-lightest; }
@@ -536,12 +621,37 @@
       p { flex: 100%; }
     }
   }
-  .row-2 h2 { text-align: center; }
+  .row-2 {
+    padding-bottom: 1rem;
+    h2 { text-align: center; }
+  }
 
-
-
+  @media #{$pad} {
+    .row-3, .row-4, .row-5 {
+      .image {
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
   @media #{$tablet} {
     .row-2, .row-3, .row-4 { margin-bottom: 3rem; }
+    .row-1 {
+      height: 500px;
+      .content {
+        font-size: $font-size-h1; font-weight: 800;
+      }
+    }
+    .row-2 {
+      .row { height: 530px; }
+      .col-xs-12 { height: 100%; }
+      .content { height: 100%; }
+    }
+  }
+  @media #{$laptop} {
     .row-1 {
       height: 668px;
       .content {
@@ -549,12 +659,7 @@
         max-width: 75%;
       }
     }
-    .row-2 {
-      .row { height: 700px; }
-      .col-xs-12 { height: 100%; }
-      .content { height: 100%; }
-    }
-    .text { padding-bottom: 0; }
+    .row-2 .row { height: 700px; }
   }
 }
 

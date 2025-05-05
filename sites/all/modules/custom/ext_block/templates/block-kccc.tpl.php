@@ -3,7 +3,7 @@
 <div class="block-kccc">
   <div class="content">
     <div class="row">
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-lg-7 col-xl-6">
         <h2>О компании</h2>
 
         <div class="text">
@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-lg-5 col-xl-6">
         <div class="image">
           <img src="/sites/default/files/images/blocks/kccc.jpg" alt="KCCC GROUP">
         </div>

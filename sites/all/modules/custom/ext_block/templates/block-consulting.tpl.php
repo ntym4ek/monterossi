@@ -3,7 +3,7 @@
 <div class="block-consulting">
   <div class="content">
     <div class="row">
-      <div class="col-xs-12 col-lg-6">
+      <div class="col-xs-12 col-lg-7 col-xl-6">
         <div class="text">
           <h2>Профессиональная консультация</h2>
           <p>Наши специалисты помогут вам профессионально подобрать смазочные материалы для всех узлов и&nbsp;агрегатов вашей техники или оборудования, дадут рекомендации по&nbsp;правильной эксплуатации и&nbsp;регламенту замены.</p>
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-lg-6">
+      <div class="col-xs-12 col-lg-5 col-xl-6">
         <div class="image"><img src="/sites/default/files/images/blocks/support.png" alt="Консультация MONTEROSSI"></div>
       </div>
     </div>

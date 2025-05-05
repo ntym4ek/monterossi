@@ -194,12 +194,12 @@
     <div class="page-footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-3 col-md-1">
+          <div class="col-xs-12 col-md-2 col-lg-1">
             <div class="branding">
               <div class="image"><a href="/"><img src="/sites/all/themes/project/images/logo/logo.png" alt="MONTEROSSI" /></a></div>
             </div>
           </div>
-          <div class="col-xs-8 col-md-4">
+          <div class="col-xs-12 col-md-5 col-lg-4">
             <ul class="menu company">
               <li><?php print l(t('About us'), 'node/13'); ?></li>
               <li><?php print l(t('For distributors'), 'node/5'); ?></li>
@@ -209,7 +209,7 @@
             </ul>
           </div>
 
-          <div class="col-xs-6 col-md-4">
+          <div class="col-xs-12 hide-xs show-lg col-lg-4">
             <ul class="menu directions">
               <li><?php print l(t('Motor oils for passenger cars'), '/katalog', ['html' => true, 'query' => ['f[0]' => 'field_p_category:4', 'f[1]' => 'field_p_line:32']]); ?></li>
               <li><?php print l(t('Motor oils for trucks'), '/katalog', ['html' => true, 'query' => ['f[0]' => 'field_p_category:4', 'f[1]' => 'field_p_line:33']]); ?></li>
@@ -218,7 +218,7 @@
             </ul>
           </div>
 
-          <div class="col-xs-6 col-md-3">
+          <div class="col-xs-12 col-md-5 col-lg-3">
             <ul class="menu actions">
               <li><?php print l(t('Contacts'), 'node/4'); ?></li>
               <li><?php print l('ООО «КССС Лубрикантс»', '<front>'); ?></li>

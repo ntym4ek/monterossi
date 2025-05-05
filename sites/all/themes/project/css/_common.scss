@@ -87,6 +87,7 @@
   }
   .menu {
     font-size: $font-size-small; font-weight: 700; text-transform: uppercase;
+    margin-bottom: 1rem;
     a {
       color: inherit;
       display: inline-block;
@@ -101,7 +102,9 @@
   }
 
   @media #{$pad} {
-    .menu { max-width: 270px; }
+    .menu {
+      margin-bottom: 0;
+    }
   }
   @media #{$tablet} {
     .menu { max-width: 300px; }
@@ -150,10 +153,12 @@
   }
 
   @media #{$pad} {
+    padding: 0 1rem;
     .p-label { font-size: $font-size-h3; }
     .p-description { font-size: $font-size-base; }
   }
   @media #{$laptop} {
+    padding: 0 2rem;
     .p-label {
       font-size: $font-size-h4;
       min-height: 50px;
@@ -184,6 +189,7 @@
   background-color: $gray-dark;
   background-image: none;
   border: none;
+  max-width: 90%;
   .btn {
     @include button-variant($text-color, #fff, #fff);
   }
@@ -211,6 +217,10 @@
     background-image: none;
     color: inherit;
     right: 1rem; top: 45%;
+  }
+
+  @media #{$pad} {
+    max-width: initial;
   }
 }
 
@@ -279,7 +289,7 @@
 
 .form-item-fz152-agreement {
   color: $gray-light; font-size: $font-size-small;
-  margin-top: 2rem;
+  margin-top: 1rem;
   a {
     color: inherit; text-decoration: underline;
     transition: color 200ms;

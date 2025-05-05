@@ -20,8 +20,8 @@ function fnc_map_page()
   $output = '<div class="sellers">' .
               '<div class="row">' .
                 '<div class="col-xs-12"><div id="type"></div></div>' .
-                '<div class="col-xs-12 col-md-3"><div id="list"></div></div>' .
-                '<div class="col-xs-12 col-md-9"><div id="map"></div></div>' .
+                '<div class="col-xs-12 col-md-5 col-xl-3"><div id="list"></div></div>' .
+                '<div class="col-xs-12 col-md-7 col-xl-9"><div id="map"></div></div>' .
               '</div>' .
             '</div>';
 

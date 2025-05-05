@@ -2,7 +2,7 @@
 ?>
 <div class="block-quality">
   <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-9  col-lg-7 col-xl-6">
       <div class="content">
         <div class="text">
           <h2>Безупречное качество</h2>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-3 col-lg-5 col-xl-6">
       <div class="image">
         <img src="/sites/default/files/images/blocks/quality.jpg" alt="Качество MONTEROSSI">
       </div>
