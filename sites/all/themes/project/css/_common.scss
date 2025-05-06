@@ -118,9 +118,11 @@
     margin: 1rem 0;
   }
   .p-image {
+    display: flex;
     margin-bottom: 1rem;
     position: relative;
     height: 250px;
+    &.center { justify-content: center; }
     .image {
       height: 100%;
       max-width: 65%; // край предмета по середине с учётом правой отбивки

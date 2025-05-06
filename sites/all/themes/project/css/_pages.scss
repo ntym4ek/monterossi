@@ -102,6 +102,8 @@
     > li > a { font-weight: 700; }
     .submenu > li > a {
       color: inherit;
+      transition: color 200ms;
+      &:hover,
       &.selected { color: $brand-red; }
     }
 

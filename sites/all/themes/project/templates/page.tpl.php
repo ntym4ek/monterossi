@@ -222,7 +222,7 @@
             <ul class="menu actions">
               <li><?php print l(t('Contacts'), 'node/4'); ?></li>
               <li><?php print l('ООО «КССС Лубрикантс»', '<front>'); ?></li>
-              <li><a href="tel:88005502426" class="contacts c0py">8 (800) 550-24-26</a></li>
+              <li><a href="tel:+79127281111" class="contacts c0py">+7 (912) 728-11-11</a></li>
               <li><a href="mailto:info@monterossi.ru" class="contacts c0py">info@monterossi.ru</a></li>
             </ul>
           </div>

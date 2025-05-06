@@ -22,11 +22,13 @@ function project_product_teaser($vars)
   $output =   '<a href="' . $product_info['url'] . '">';
   $output .=  '<div class="product product-teaser hover-raise">';
   $output .=    '<div class="p-label">' . $product_info['label'] . '</div>';
-  $output .=    '<div class="p-image">';
+  $output .=    '<div class="p-image' . (empty($product_info['adv']) ? ' center' : '') . '">';
   $output .=      '<div class="image"><img src="' . $product_info['image'] . '" alt="' . $product_info['label'] . '"></div>';
   $output .=      '<div class="p-stickers">';
-  foreach ($product_info['adv'] as $adv) {
-    $output .= '<div class="p-sticker"><img src="' . $adv['icon_url'] . '" alt="' . $adv['label'] . '"></div>';
+  if (!empty($product_info['adv'])) {
+    foreach ($product_info['adv'] as $adv) {
+      $output .= '<div class="p-sticker"><img src="' . $adv['icon_url'] . '" alt="' . $adv['label'] . '"></div>';
+    }
   }
   $output .=      '</div>';
   $output .=    '</div>';

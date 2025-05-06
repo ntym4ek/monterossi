@@ -2492,9 +2492,12 @@ ul.menu {
     text-align: center;
     margin: 1rem 0; }
   .product-teaser .p-image {
+    display: flex;
     margin-bottom: 1rem;
     position: relative;
     height: 250px; }
+    .product-teaser .p-image.center {
+      justify-content: center; }
     .product-teaser .p-image .image {
       height: 100%;
       max-width: 65%; }
@@ -3309,9 +3312,11 @@ ul.menu {
   .block-contract .row-5 .list {
     padding: 2rem 0 0; } }
 @media only screen and (min-width: 1366px) {
-  .block-contract .row-1 .content {
-    font-size: 45px;
-    max-width: 45%; }
+  .block-contract .row-1 {
+    height: 668px; }
+    .block-contract .row-1 .content {
+      font-size: 45px;
+      max-width: 45%; }
   .block-contract .row-3 .content {
     min-height: 300px; }
   .block-contract .row-3 .box {
@@ -3524,8 +3529,9 @@ ul.menu {
     .sellers .listMenu > li > a {
       font-weight: 700; }
     .sellers .listMenu .submenu > li > a {
-      color: inherit; }
-      .sellers .listMenu .submenu > li > a.selected {
+      color: inherit;
+      transition: color 200ms; }
+      .sellers .listMenu .submenu > li > a:hover, .sellers .listMenu .submenu > li > a.selected {
         color: #DA0009; }
   .sellers .typeMenu {
     display: flex;
