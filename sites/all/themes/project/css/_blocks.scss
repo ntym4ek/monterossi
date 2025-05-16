@@ -306,12 +306,12 @@
   margin-bottom: 0;
   &:last-child {
     border-bottom: 1px solid $gray-light;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   .block-title {
     display: flex; justify-content: space-between; align-items: center;
     cursor: pointer;
-    font-size: $font-size-base; font-weight: 500;
+    font-size: $font-size-large; font-weight: 500;
     padding: 1rem; margin: 0;
     i {
       transform: rotate(90deg);
@@ -339,6 +339,13 @@
     display: flex; align-items: flex-start;
     input { margin-right: .5rem; }
     label { margin-bottom: 2px; }
+  }
+
+  @media #{$tablet} {
+    .block-title {
+      font-size: $font-size-base;
+    }
+    &:last-child { margin-bottom: 4rem; }
   }
 }
 
@@ -545,7 +552,7 @@
       .image {
         height: 100%;
         img {
-          height: 100%;
+          height: 100%; width: 100%;
           object-fit: cover;
         }
       }

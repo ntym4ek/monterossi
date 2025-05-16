@@ -112,7 +112,7 @@
 }
 
 .product-teaser {
-  padding: 0 2rem;
+  padding: 0 3rem;
   .p-label {
     color: $text-color; font-size: $font-size-h2; font-weight: 800; text-align: center;
     margin: 1rem 0;
@@ -155,12 +155,11 @@
   }
 
   @media #{$pad} {
-    padding: 0 1rem;
+    padding: 0 2rem;
     .p-label { font-size: $font-size-h3; }
     .p-description { font-size: $font-size-base; }
   }
   @media #{$laptop} {
-    padding: 0 2rem;
     .p-label {
       font-size: $font-size-h4;
       min-height: 50px;

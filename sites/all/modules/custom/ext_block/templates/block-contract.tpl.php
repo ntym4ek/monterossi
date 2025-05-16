@@ -46,7 +46,7 @@
 
       <div class="col-xs-12 col-lg-5 col-xl-6">
         <div class="image">
-          <img src="/sites/default/files/images/blocks/contract-1.png" alt="Преимущества контрактного производства MONTEROSSI">
+          <img src="/sites/default/files/images/blocks/contract-1.jpg" alt="Преимущества контрактного производства MONTEROSSI">
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
 
       <div class="col-xs-12 col-lg-6">
         <div class="image">
-          <img src="/sites/default/files/images/blocks/contract-3.png" alt="Возможности контрактного производства MONTEROSSI">
+          <img src="/sites/default/files/images/blocks/contract-3.jpg" alt="Возможности контрактного производства MONTEROSSI">
         </div>
       </div>
     </div>

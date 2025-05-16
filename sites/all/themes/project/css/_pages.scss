@@ -45,6 +45,9 @@
       p { margin-top: 0; }
     }
   }
+  .node-text,
+  .node-specs,
+  .node-advantages { font-size: $font-size-large; }
   .node-files {
     display: flex; flex-wrap: wrap;
     margin-bottom: 2rem;
@@ -67,6 +70,9 @@
       .action:first-child { width: initial; }
       .action:first-child a { width: initial; }
     }
+    .node-text,
+    .node-specs,
+    .node-advantages {font-size: $font-size-base; }
   }
   @media #{$tablet} {
     .field { margin-bottom: 2rem; }

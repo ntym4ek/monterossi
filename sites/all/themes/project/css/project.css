@@ -2484,7 +2484,7 @@ ul.menu {
     max-width: 300px; } }
 
 .product-teaser {
-  padding: 0 2rem; }
+  padding: 0 3rem; }
   .product-teaser .p-label {
     color: #333;
     font-size: 1.667rem;
@@ -2531,25 +2531,23 @@ ul.menu {
     padding: .2rem .5rem; }
   @media only screen and (min-width: 768px) {
     .product-teaser {
-      padding: 0 1rem; }
+      padding: 0 2rem; }
       .product-teaser .p-label {
         font-size: 1.333rem; }
       .product-teaser .p-description {
         font-size: 1rem; } }
   @media only screen and (min-width: 1366px) {
-    .product-teaser {
-      padding: 0 2rem; }
-      .product-teaser .p-label {
-        font-size: 1.111rem;
-        min-height: 50px; }
-      .product-teaser .p-image {
-        height: 260px; }
-      .product-teaser .p-description {
-        font-size: 0.889rem; }
-      .product-teaser .p-tares {
-        font-size: 0.889rem; }
-      .product-teaser .p-stickers {
-        width: 27%; } }
+    .product-teaser .p-label {
+      font-size: 1.111rem;
+      min-height: 50px; }
+    .product-teaser .p-image {
+      height: 260px; }
+    .product-teaser .p-description {
+      font-size: 0.889rem; }
+    .product-teaser .p-tares {
+      font-size: 0.889rem; }
+    .product-teaser .p-stickers {
+      width: 27%; } }
 
 .form-item .form-text,
 .form-item .form-select {
@@ -3043,13 +3041,13 @@ ul.menu {
   margin-bottom: 0; }
   .block-facetapi:last-child {
     border-bottom: 1px solid #ccc;
-    margin-bottom: 4rem; }
+    margin-bottom: 2rem; }
   .block-facetapi .block-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.222rem;
     font-weight: 500;
     padding: 1rem;
     margin: 0; }
@@ -3083,6 +3081,11 @@ ul.menu {
       margin-right: .5rem; }
     .block-facetapi .form-type-checkbox label {
       margin-bottom: 2px; }
+  @media only screen and (min-width: 1024px) {
+    .block-facetapi .block-title {
+      font-size: 1rem; }
+    .block-facetapi:last-child {
+      margin-bottom: 4rem; } }
 
 .block-current-search .item-list ul {
   display: flex;
@@ -3290,6 +3293,7 @@ ul.menu {
     height: 100%; }
     .block-contract .row-2 .image img, .block-contract .row-5 .image img {
       height: 100%;
+      width: 100%;
       object-fit: cover; }
   .block-contract .row-3 .box {
     min-height: 150px; }
@@ -3463,6 +3467,10 @@ ul.menu {
     margin-bottom: 1rem; }
     .node-product.node-full .field .field-items p {
       margin-top: 0; }
+.node-product.node-full .node-text,
+.node-product.node-full .node-specs,
+.node-product.node-full .node-advantages {
+  font-size: 1.222rem; }
 .node-product.node-full .node-files {
   display: flex;
   flex-wrap: wrap;
@@ -3490,7 +3498,11 @@ ul.menu {
     .node-product.node-full .node-actions .action:first-child {
       width: initial; }
     .node-product.node-full .node-actions .action:first-child a {
-      width: initial; } }
+      width: initial; }
+  .node-product.node-full .node-text,
+  .node-product.node-full .node-specs,
+  .node-product.node-full .node-advantages {
+    font-size: 1rem; } }
 @media only screen and (min-width: 1024px) {
   .node-product.node-full .field {
     margin-bottom: 2rem; }
