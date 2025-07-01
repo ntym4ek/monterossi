@@ -64,6 +64,14 @@
                 </div>
               </div>
 
+              <div class="col hide-xs show-lg">
+                <div class="social">
+                  <a href="https://t.me/monterossi_oil" target="_blank" rel="nofollow"><i class="icon icon-07"></i></a>
+                  <a href="https://vk.com/monterossi" target="_blank" rel="nofollow"><i class="icon icon-08"></i></a>
+                  <a href="https://www.ozon.ru/seller/monterossi-2562333/?miniapp=seller_2562333" target="_blank" rel="nofollow"><i class="icon icon-09"></i></a>
+                  <a href="https://www.wildberries.ru/seller/250007216" target="_blank" rel="nofollow"><i class="icon icon-10"></i></a>
+                </div>
+              </div>
 
               <div class="col show-xs hide-lg">
                 <div class="nav-mobile-label"><div class="label"><div class="icon"></div></div></div>
@@ -224,6 +232,14 @@
               <li><?php print l('ООО «КССС Лубрикантс»', '<front>'); ?></li>
               <li><a href="tel:+79127281111" class="contacts c0py">+7 (912) 728-11-11</a></li>
               <li><a href="mailto:info@monterossi.ru" class="contacts c0py">info@monterossi.ru</a></li>
+              <li>
+                <div class="social">
+                  <a href="https://t.me/monterossi_oil" target="_blank" rel="nofollow"><i class="icon icon-07"></i></a>
+                  <a href="https://vk.com/monterossi" target="_blank" rel="nofollow"><i class="icon icon-08"></i></a>
+                  <a href="https://www.ozon.ru/seller/monterossi-2562333/?miniapp=seller_2562333" target="_blank" rel="nofollow"><i class="icon icon-09"></i></a>
+                  <a href="https://www.wildberries.ru/seller/250007216" target="_blank" rel="nofollow"><i class="icon icon-10"></i></a>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -231,7 +247,7 @@
       </div>
     </div>
 
-    <div id="back-to-top"><i class="icon icon-17 direction-clr"></i></div>
+    <div id="back-to-top"><i class="icon icon-03 direction-clr"></i></div>
   </div>
 </div>
 

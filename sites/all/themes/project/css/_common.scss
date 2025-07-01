@@ -54,6 +54,15 @@
     color: $menu-item-color; font-size: $font-size-base;
     &:hover { color: $menu-item-hover-color; }
   }
+  .social {
+    a {
+      display: inline-block;
+      color: $menu-item-color; font-size: 28px;
+      margin-left: 6px;
+      transition: color 200ms;
+      &:hover { color: $menu-item-hover-color; }
+    }
+  }
   .secondary-menu.menu > li {
     > a { padding-top: 0; padding-bottom: 0; }
     &:not(:last-child) > a { border-right: 2px solid #606060; }
@@ -99,6 +108,15 @@
     }
     .ctooltip { margin-top: .1rem; }
     .contacts { text-transform: lowercase; }
+    .social {
+      a {
+        display: inline-block;
+        color: $gray; font-size: 32px;
+        margin-right: 6px;
+        transition: color 200ms;
+        &:hover { color: $menu-item-hover-color; }
+      }
+    }
   }
 
   @media #{$pad} {

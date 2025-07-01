@@ -139,13 +139,13 @@
         <?php if ($product_info['tds'] || $product_info['passport'] || $product_info['test']): ?>
         <div class="node-files">
           <?php if ($product_info['tds']): ?>
-          <div class="file"><a href="<?php print $product_info['tds']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-31"></i>TDS</a></div>
+          <div class="file"><a href="<?php print $product_info['tds']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-04"></i>TDS</a></div>
           <?php endif; ?>
           <?php if ($product_info['passport']): ?>
-          <div class="file"><a href="<?php print $product_info['passport']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-32"></i>Паспорт продукта</a></div>
+          <div class="file"><a href="<?php print $product_info['passport']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-05"></i>Паспорт продукта</a></div>
           <?php endif; ?>
           <?php if ($product_info['test']): ?>
-          <div class="file"><a href="<?php print $product_info['test']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-33"></i>Протокол испытаний</a></div>
+          <div class="file"><a href="<?php print $product_info['test']; ?>" class="btn btn-small btn-default btn-with-icon btn-icon-left btn-wide" download><i class="icon icon-06"></i>Протокол испытаний</a></div>
           <?php endif; ?>
         </div>
         <?php endif; ?>

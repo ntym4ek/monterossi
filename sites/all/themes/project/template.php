@@ -53,16 +53,16 @@ function project_facetapi_title($vars)
 {
   // Сделать заголовки блоков фасетных фильтров мультиязычными
   if (strpos($vars["facet"]["#settings"]->facet, 'field_p_category') !== false) {
-    return '<span>Категория</span><i class="icon icon-13"></i>';
+    return '<span>Категория</span><i class="icon icon-02"></i>';
   }
   if (strpos($vars["facet"]["#settings"]->facet, 'field_p_viscosity') !== false) {
-    return '<span>Вязкость</span><i class="icon icon-13"></i>';
+    return '<span>Вязкость</span><i class="icon icon-02"></i>';
   }
   if (strpos($vars["facet"]["#settings"]->facet, 'field_p_specs') !== false) {
-    return '<span>Соответствия</span><i class="icon icon-13"></i>';
+    return '<span>Соответствия</span><i class="icon icon-02"></i>';
   }
   if (strpos($vars["facet"]["#settings"]->facet, 'field_p_line') !== false) {
-    return '<span>Направление</span><i class="icon icon-13"></i>';
+    return '<span>Направление</span><i class="icon icon-02"></i>';
   }
 }
 
