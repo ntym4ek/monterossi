@@ -10,9 +10,6 @@
     <div class="menu-mobile-wr">
       <div>
         <?php if ($primary_nav): print $primary_nav; endif; ?>
-        <div class="global menu-mobile-link">
-          <div><a href="https://kccc.group" target="_blank" title="KCCC GROUP">KCCC GROUP</a></div>
-        </div>
       </div>
       <div>
         <?php if (!empty($language_link_mobile)): ?>
@@ -35,11 +32,6 @@
                   <div class="local">
                     <a href="<?php print $front_page ?>">
                       <img src="/sites/all/themes/project/images/logo/logo.png" alt="MONTEROSSI" />
-                    </a>
-                  </div>
-                  <div class="global">
-                    <a href="https://kccc.group" target="_blank" title="KCCC GROUP">
-                      <img src="/sites/all/themes/project/images/logo/ring_kccc_black.png" alt="KCCC GROUP" />
                     </a>
                   </div>
                 </div>
@@ -213,7 +205,6 @@
               <li><?php print l(t('For distributors'), 'node/5'); ?></li>
               <li><?php print l(t('Technical advice'), 'node/11'); ?></li>
               <li><?php print l(t('Contract production'), 'node/39'); ?></li>
-              <li><a href="https://kccc.group" target="_blank">KCCC GROUP</a></li>
             </ul>
           </div>
 
