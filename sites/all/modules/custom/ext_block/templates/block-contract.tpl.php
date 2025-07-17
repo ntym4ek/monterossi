@@ -20,23 +20,23 @@
           </div>
           <div class="accordion">
             <div class="a-item">
-              <div class="a-title"><span>Индивидуальные формулы</span><i class="icon icon-13"></i></div>
+              <div class="a-title"><span>Индивидуальные формулы</span><i class="icon icon-02"></i></div>
               <div class="a-text">разрабатываем составы под ваши требования: от&nbsp;базовых масел до&nbsp;премиальных синтетических композиций</div>
             </div>
             <div class="a-item">
-              <div class="a-title"><span>Гибкие объемы</span><i class="icon icon-13"></i></div>
+              <div class="a-title"><span>Гибкие объемы</span><i class="icon icon-02"></i></div>
               <div class="a-text">от мелких партий до&nbsp;крупносерийного производства с&nbsp;гарантией стабильного качества</div>
             </div>
             <div class="a-item">
-              <div class="a-title"><span>Полный цикл услуг</span><i class="icon icon-13"></i></div>
+              <div class="a-title"><span>Полный цикл услуг</span><i class="icon icon-02"></i></div>
               <div class="a-text">от разработки рецептуры до&nbsp;фасовки</div>
             </div>
             <div class="a-item">
-              <div class="a-title"><span>Сертификация и соответствие</span><i class="icon icon-13"></i></div>
+              <div class="a-title"><span>Сертификация и соответствие</span><i class="icon icon-02"></i></div>
               <div class="a-text">готовые решения под стандарты API, ACEA, ILSAC, OEM-одобрения</div>
             </div>
             <div class="a-item">
-              <div class="a-title"><span>Логистика и складирование</span><i class="icon icon-13"></i></div>
+              <div class="a-title"><span>Логистика и складирование</span><i class="icon icon-02"></i></div>
               <div class="a-text">берем на себя упаковку, хранение и доставку продукции</div>
             </div>
           </div>

@@ -18,21 +18,21 @@
           <div class="content">
             <div class="accordion">
               <div class="a-item">
-                <div class="a-title"><span>БЕЗУПРЕЧНОЕ КАЧЕСТВО</span><i class="icon icon-13"></i></div>
+                <div class="a-title"><span>БЕЗУПРЕЧНОЕ КАЧЕСТВО</span><i class="icon icon-02"></i></div>
                 <div class="a-text">
                   <p>Наша философия, наш главный принцип и&nbsp;подход при&nbsp;создании продуктов от&nbsp;разработки до&nbsp;упаковки на&nbsp;паллете&nbsp;— мы&nbsp;стремимся к&nbsp;идеалу, эталонному качеству, прецизионному контролю на&nbsp;всех этапах производства.</p>
                   <p>Все&nbsp;партии продукции проходят контроль качества в&nbsp;собственной сертифицированной лаборатории.</p>
                 </div>
               </div>
               <div class="a-item">
-                <div class="a-title"><span>ИННОВАЦИИ И ТЕХНОЛОГИИ</span><i class="icon icon-13"></i></div>
+                <div class="a-title"><span>ИННОВАЦИИ И ТЕХНОЛОГИИ</span><i class="icon icon-02"></i></div>
                 <div class="a-text">
                   <p>Мы выбрали для&nbsp;себя принцип PERFECTO («совершенство в&nbsp;деталях»)&nbsp;— только идеально выверенные технологические процессы на идеально подготовленном производственном оборудовании мирового уровня.</p>
                   <p>Мы выпускаем идеальные по чистоте продукты&nbsp;— 34&nbsp;реактора и&nbsp;более 30&nbsp;000 метров трубопроводов обеспечивают нам 100%&nbsp;исключение возможности кросс-контаминации продуктов и&nbsp;компонентов.</p>
                 </div>
               </div>
               <div class="a-item">
-                <div class="a-title"><span>СТРЕМЛЕНИЕ К РОСТУ И&nbsp;ПРОГРЕССУ</span><i class="icon icon-13"></i></div>
+                <div class="a-title"><span>СТРЕМЛЕНИЕ К РОСТУ И&nbsp;ПРОГРЕССУ</span><i class="icon icon-02"></i></div>
                 <div class="a-text">
                   <p>Мы –&nbsp;прогрессивная Компания.</p>
                   <p>90%&nbsp;прибыли бизнеса инвестируется в&nbsp;дальнейшее развитие&nbsp;— именно поэтому, начиная с&nbsp;1997&nbsp;года, на&nbsp;нашей производственной площадке ни&nbsp;разу не&nbsp;было фактического прекращения строительства новых цехов, инфраструктуры или&nbsp;монтажа нового оборудования.</p>
@@ -40,7 +40,7 @@
                 </div>
               </div>
               <div class="a-item hide-lg">
-                <div class="a-title"><span>КЛИЕНТОЦЕНТРИЧНОСТЬ</span><i class="icon icon-13"></i></div>
+                <div class="a-title"><span>КЛИЕНТОЦЕНТРИЧНОСТЬ</span><i class="icon icon-02"></i></div>
                 <div class="a-text">
                   <p>Высокое качество нашей продукции&nbsp;— наш&nbsp;главный приоритет.</p>
                   <p>Мы&nbsp;не&nbsp;делаем компромиссов и&nbsp;стремимся к&nbsp;тому, чтобы у&nbsp;каждого клиента бренд MONTEROSSI ассоциировался с&nbsp;идеалом.</p>
@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div class="a-item hide-lg">
-                <div class="a-title"><span>ЭКОЛОГИЧЕСКАЯ УСТОЙЧИВОСТЬ</span><i class="icon icon-13"></i></div>
+                <div class="a-title"><span>ЭКОЛОГИЧЕСКАЯ УСТОЙЧИВОСТЬ</span><i class="icon icon-02"></i></div>
                 <div class="a-text">
                   <p>Мы регулярно анализируем воздействие нашей деятельности на&nbsp;окружающую среду и&nbsp;всегда придерживаемся действующего законодательства и&nbsp;стандартов в&nbsp;данной сфере.</p>
                   <p>Наша цель&nbsp;— не&nbsp;только соответствовать требованиям, но&nbsp;и&nbsp;превосходить&nbsp;их.</p>
@@ -67,7 +67,7 @@
           <div class="content">
             <div class="accordion">
               <div class="a-item">
-                <div class="a-title"><span>КЛИЕНТОЦЕНТРИЧНОСТЬ</span><i class="icon icon-13"></i></div>
+                <div class="a-title"><span>КЛИЕНТОЦЕНТРИЧНОСТЬ</span><i class="icon icon-02"></i></div>
                 <div class="a-text">
                   <p>Высокое качество нашей продукции&nbsp;— наш&nbsp;главный приоритет.</p>
                   <p>Мы&nbsp;не&nbsp;делаем компромиссов и&nbsp;стремимся к&nbsp;тому, чтобы у&nbsp;каждого клиента бренд MONTEROSSI ассоциировался с&nbsp;идеалом.</p>
@@ -75,7 +75,7 @@
                 </div>
               </div>
               <div class="a-item">
-                <div class="a-title"><span>ЭКОЛОГИЧЕСКАЯ УСТОЙЧИВОСТЬ</span><i class="icon icon-13"></i></div>
+                <div class="a-title"><span>ЭКОЛОГИЧЕСКАЯ УСТОЙЧИВОСТЬ</span><i class="icon icon-02"></i></div>
                 <div class="a-text">
                   <p>Мы регулярно анализируем воздействие нашей деятельности на&nbsp;окружающую среду и&nbsp;всегда придерживаемся действующего законодательства и&nbsp;стандартов в&nbsp;данной сфере.</p>
                   <p>Наша цель&nbsp;— не&nbsp;только соответствовать требованиям, но&nbsp;и&nbsp;превосходить&nbsp;их.</p>
